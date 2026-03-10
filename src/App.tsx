@@ -5,7 +5,8 @@ function App() {
     <div className="app">
       <nav className="navbar">
         <div className="nav-container">
-          <h1 className="logo">HIGHEND Interiors</h1>
+          <h1 ><img className="logo" src="/logo.png" al="Logo" />
+          <img className="highend" src="/high_end.png" alt="HIGH END" /><span className="logo-interiors">Interiors</span></h1>
           <ul className="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -20,7 +21,7 @@ function App() {
 
       <section className="hero" id="home">
         <div className="hero-content">
-          <h2>Crafting Dream Spaces</h2>
+          <h2 style={{ color: '#fff' }}>Crafting Dream Spaces</h2>
           <p>Premium Interior Design & Execution</p>
           <div className="hero-buttons">
             <button className="cta-button">Get Free Quote</button>
@@ -29,7 +30,7 @@ function App() {
         </div>
       </section>
 
-      <section className="stats">
+      {/* <section className="stats">
         <div className="container">
           <div className="stats-grid">
             <div className="stat-item">
@@ -50,7 +51,7 @@ function App() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="about" id="about">
         <div className="container">
