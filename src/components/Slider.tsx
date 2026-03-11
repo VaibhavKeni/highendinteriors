@@ -69,7 +69,7 @@ export default function CitiesSlider() {
 
   return (
     <div className={`slider ${sliderReady ? 's--ready' : ''}`}>
-      <p className="slider__top-heading">HIGH END <span style={{ fontFamily: "Mistral, cursive", textTransform: 'none', fontSize: '40px',letterSpacing: 0 }}>Interiors</span></p>
+      <p className="slider__top-heading">HIGH END <span style={{ fontFamily: "Mistral", textTransform: 'none', fontSize: '40px',letterSpacing: 0 }}>Interiors</span></p>
       <div className="slider__slides">
         {slides.map((slide, index) => (
           <div

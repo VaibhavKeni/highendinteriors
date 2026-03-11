@@ -1,6 +1,15 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 @import 'animate.css';
 
+
+@font-face {
+  font-family: 'Mistral';
+  src: url('/fonts/MISTRAL.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 :root {
   --primary: #d4af37;
   --secondary: #b8941f;
@@ -79,6 +88,7 @@ body {
   font-size: 1.8rem;
   color: var(--dark);
   letter-spacing: 0;
+  font-weight: normal;
 }
 
 .nav-link {
@@ -275,7 +285,9 @@ body {
   }
 
   .logo-interiors {
+    font-family: 'Mistral', cursive;
     font-size: 1.4rem;
+    font-weight: normal;
   }
 
   .hero-section {
@@ -317,7 +329,9 @@ body {
   }
 
   .logo-interiors {
+    font-family: 'Mistral', cursive;
     font-size: 1.2rem;
+    font-weight: normal;
   }
 
   .hero-section {
@@ -411,7 +425,9 @@ body {
 /* Extra small devices (320px and below) */
 @media (max-width: 320px) {
   .logo-interiors {
+    font-family: 'Mistral', cursive;
     font-size: 1rem;
+    font-weight: normal;
   }
 
   .hero-content h2 {

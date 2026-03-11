@@ -222,7 +222,7 @@ function App() {
             <p className="text-muted">Google Reviews from Our Happy Clients</p>
           </div>
 
-          <div className="row g-4">
+          {/* <div className="row g-4">
             {[
               { name: 'Rajesh Kumar', role: 'Homeowner', rating: 5, text: 'HIGHEND Interiors transformed our home beautifully. The attention to detail and quality of work exceeded our expectations. Highly recommended!' },
               { name: 'Priya Sharma', role: 'Business Owner', rating: 5, text: 'Professional team with excellent design sense. They completed our office interior on time and within budget. Very satisfied with the results.' },
@@ -243,7 +243,7 @@ function App() {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
 
           <div className="text-center mt-4">
             <a href="https://maps.app.goo.gl/YraiHXFWgaJHuPpS6" target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary">
