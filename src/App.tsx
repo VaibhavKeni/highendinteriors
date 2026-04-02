@@ -111,7 +111,7 @@ function App() {
       setIsLoading(false)
       // Fallback: Send via WhatsApp
       const whatsappNumber = '919867818123'
-      const text = `Hi, I want to book a callback.%0AName: ${name}%0APhone: ${phone}%0AFloor Plan: ${floorPlan}%0ABudget: ${budget}%0ACity: ${city}`
+      const text = `Hi, I want to book a callback.%0AName: ${name}%0APhone: ${phone}%0AFloor Plan: ${floorPlan}%0ABudget: ${budget}`
       window.open(`https://wa.me/${whatsappNumber}?text=${text}`, '_blank')
       setStatusModal({ show: true, type: 'success', message: 'Opening WhatsApp...' })
       setDreamFormData({ name: '', phone: '', floorPlan: '', budget: '' })

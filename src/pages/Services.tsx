@@ -15,7 +15,6 @@ interface Service {
 }
 
 function Services() {
-  const [showModal, setShowModal] = useState(false)
   const [showQuoteModal, setShowQuoteModal] = useState(false)
   const [selectedService, setSelectedService] = useState<Service | null>(null)
 
@@ -290,7 +289,7 @@ function Services() {
             <p>Let's discuss your project and create something extraordinary together</p>
             <button 
               className="btn btn-primary btn-lg"
-              onClick={() => setShowModal(true)}
+              onClick={() => setShowQuoteModal(true)}
             >
               <i className="fas fa-calendar-check me-2"></i>Book a Consultation
             </button>
@@ -332,7 +331,7 @@ function Services() {
                   className="btn btn-primary btn-block"
                   onClick={() => {
                     setSelectedService(null)
-                    setShowModal(true)
+                    setShowQuoteModal(true)
                   }}
                 >
                   <i className="fas fa-phone me-2"></i>Get Quote for This Service

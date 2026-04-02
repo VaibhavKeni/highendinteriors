@@ -12,7 +12,7 @@ function Contact() {
     subject: '',
     message: ''
   })
-  const [submitted, setSubmitted] = useState(false)
+  // const [submitted, setSubmitted] = useState(false)
   const [showQuoteModal, setShowQuoteModal] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [statusModal, setStatusModal] = useState({ show: false, type: '', message: '' })

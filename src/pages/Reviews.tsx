@@ -37,15 +37,15 @@ function Reviews() {
     }, 3000)
   }
 
-  const renderStars = (rating: number) => {
-    return (
-      <div className="stars">
-        {[...Array(5)].map((_, i) => (
-          <i key={i} className={`fas fa-star ${i < rating ? 'filled' : ''}`}></i>
-        ))}
-      </div>
-    )
-  }
+  // const renderStars = (rating: number) => {
+  //   return (
+  //     <div className="stars">
+  //       {[...Array(5)].map((_, i) => (
+  //         <i key={i} className={`fas fa-star ${i < rating ? 'filled' : ''}`}></i>
+  //       ))}
+  //     </div>
+  //   )
+  // }
 
   return (
     <div className="reviews-page">
