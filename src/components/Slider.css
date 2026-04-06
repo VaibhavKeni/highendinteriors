@@ -220,6 +220,7 @@
   background-image: inherit;
   background-size: cover;
   background-position: center center;
+  background-repeat: no-repeat;
   transition: opacity 0.25s;
   opacity: 0;
 }

@@ -90,7 +90,9 @@ export default function CitiesSlider() {
                 <div className="slider__slide-part" key={i}>
                   <div
                     className="slider__slide-part-inner"
-                    style={{ backgroundImage: `url(${slide.img})` }}
+                    style={{
+                      backgroundImage: `url(${slide.img})`,
+                    }}
                   />
                 </div>
               ))}
