@@ -180,7 +180,7 @@ function App() {
         <div className="container">
           <div className="row g-4 g-md-5 align-items-center">
             <div className="col-lg-6" data-animation="animate__fadeInLeft">
-              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" className="img-fluid rounded" alt="About" />
+              <img src="assets/images/Dashboard/Office.jpg" className="img-fluid rounded" alt="About" />
             </div>
             <div className="col-lg-6" data-animation="animate__fadeInRight">
               <h2 className="section-title mb-3 mb-md-4">About HIGH END Interiors</h2>
@@ -260,18 +260,18 @@ function App() {
           </div>
           <div className="row g-3 g-md-4">
             {[
-              { img: 'src/assets/images/A to Z icons/Modular Kitchen.png', title: 'Modular Kitchen' },
-              { img: 'src/assets/images/A to Z icons/Space Saving Furniture.png', title: 'Space Saving Furniture' },
-              { img: 'src/assets/images/A to Z icons/False Ceiling.png', title: 'False Ceiling' },
-              { img: 'src/assets/images/A to Z icons/Wallpaper.png', title: 'Wallpaper' },
-              { img: 'src/assets/images/A to Z icons/Wall Paint.png', title: 'Wall Paint' },
-              { img: 'src/assets/images/A to Z icons/Dressing Table.png', title: 'Dressing Table' },
-              { img: 'src/assets/images/A to Z icons/Storage & Wardrobe.png', title: 'Storage & Wardrobe' },
-              { img: 'src/assets/images/A to Z icons/TV Units.png', title: 'TV Units' },
-              { img: 'src/assets/images/A to Z icons/Bathroom.png', title: 'Bathroom' },
-              { img: 'src/assets/images/A to Z icons/Study Table.png', title: 'Study Table' },
-              { img: 'src/assets/images/A to Z icons/Movable Furniture.png', title: 'Movable Furniture' },
-              { img: 'src/assets/images/A to Z icons/Light.png', title: 'Lighting' }
+              { img: 'assets/images/A to Z icons/Modular Kitchen.png', title: 'Modular Kitchen' },
+              { img: 'assets/images/A to Z icons/Space Saving Furniture.png', title: 'Space Saving Furniture' },
+              { img: 'assets/images/A to Z icons/False Ceiling.png', title: 'False Ceiling' },
+              { img: 'assets/images/A to Z icons/Wallpaper.png', title: 'Wallpaper' },
+              { img: 'assets/images/A to Z icons/Wall Paint.png', title: 'Wall Paint' },
+              { img: 'assets/images/A to Z icons/Dressing Table.png', title: 'Dressing Table' },
+              { img: 'assets/images/A to Z icons/Storage & Wardrobe.png', title: 'Storage & Wardrobe' },
+              { img: 'assets/images/A to Z icons/TV Units.png', title: 'TV Units' },
+              { img: 'assets/images/A to Z icons/Bathroom.png', title: 'Bathroom' },
+              { img: 'assets/images/A to Z icons/Study Table.png', title: 'Study Table' },
+              { img: 'assets/images/A to Z icons/Movable Furniture.png', title: 'Movable Furniture' },
+              { img: 'assets/images/A to Z icons/Light.png', title: 'Lighting' }
             ].map((item, index) => (
               <div key={index} className="col-lg-2 col-md-3 col-sm-4 col-6" data-animation="animate__fadeInUp">
                 <div className="solution-card text-center">
@@ -291,7 +291,7 @@ function App() {
           <div className="row g-4 g-md-5 align-items-center">
             <div className="col-lg-6" data-animation="animate__fadeInLeft">
               <div className="partners-img-wrapper">
-                <img src="src/assets/images/Trusted_Partners/Trusted Partners.png" alt="Trusted Partners" className="partners-img w-100" />
+                <img src="assets/images/Trusted_Partners/Trusted Partners.png" alt="Trusted Partners" className="partners-img w-100" />
               </div>
             </div>
             <div className="col-lg-6" data-animation="animate__fadeInRight">

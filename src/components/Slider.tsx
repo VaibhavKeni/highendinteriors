@@ -11,27 +11,27 @@ const slides: Slide[] = [
   {
     title: 'Living Room',
     subtitle: 'Modern Design',
-    img: 'https://images.unsplash.com/photo-1600210492493-0946911123ea?w=1600&q=80',
+    img: 'assets/images/Dashboard/Living_room.jpg',
   },
   {
     title: 'Kitchen',
     subtitle: 'Luxury Modular',
-    img: 'https://images.unsplash.com/photo-1556912173-46c336c7fd55?w=1600&q=80',
+    img: 'assets/images/Dashboard/Kitchen.jpg',
   },
   {
     title: 'Bedroom',
     subtitle: 'Elegant Space',
-    img: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1600&q=80',
+    img: 'assets/images/Dashboard/Bedroom.jpg',
   },
   {
     title: 'Office',
     subtitle: 'Contemporary',
-    img: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600&q=80',
+    img: 'assets/images/Dashboard/Office.jpg',
   },
   {
     title: 'Dining',
     subtitle: 'Premium Interior',
-    img: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1600&q=80',
+    img: 'assets/images/Dashboard/Dining.jpg',
   },
 ]
 
