@@ -11,27 +11,27 @@ const slides: Slide[] = [
   {
     title: 'Living Room',
     subtitle: 'Modern Design',
-    img: 'assets/images/Dashboard/Living_room.jpg',
+    img: '/assets/images/Dashboard/Living_room.jpg',
   },
   {
     title: 'Kitchen',
     subtitle: 'Luxury Modular',
-    img: 'assets/images/Dashboard/Kitchen.jpg',
+    img: '/assets/images/Dashboard/Kitchen.jpg',
   },
   {
     title: 'Bedroom',
     subtitle: 'Elegant Space',
-    img: 'assets/images/Dashboard/Bedroom.jpg',
+    img: '/assets/images/Dashboard/Bedroom.jpg',
   },
   {
     title: 'Office',
     subtitle: 'Contemporary',
-    img: 'assets/images/Dashboard/Office.jpg',
+    img: '/assets/images/Dashboard/Office.jpg',
   },
   {
     title: 'Dining',
     subtitle: 'Premium Interior',
-    img: 'assets/images/Dashboard/Dining.jpg',
+    img: '/assets/images/Dashboard/Dining.jpg',
   },
 ]
 
