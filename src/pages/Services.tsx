@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import QuoteModal from '../components/QuoteModal'
+import MobileBottomNav from '../components/MobileBottomNav'
 import './Services.css'
 
 interface Service {
@@ -343,6 +344,7 @@ function Services() {
       )}
 
       <Footer />
+      <MobileBottomNav onBookClick={() => setShowQuoteModal(true)} />
     </div>
   )
 }

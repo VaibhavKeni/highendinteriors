@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import QuoteModal from '../components/QuoteModal'
+import MobileBottomNav from '../components/MobileBottomNav'
 import './About.css'
 
 function About() {
@@ -156,6 +157,7 @@ function About() {
       </section>
 
       <Footer />
+      <MobileBottomNav onBookClick={() => setShowQuoteModal(true)} />
     </div>
   )
 }

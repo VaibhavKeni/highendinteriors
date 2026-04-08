@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import QuoteModal from '../components/QuoteModal'
+import MobileBottomNav from '../components/MobileBottomNav'
 import './Gallery.css'
 
 interface SiteProject {
@@ -275,6 +276,7 @@ function Gallery() {
       )}
 
       <Footer />
+      <MobileBottomNav onBookClick={() => setShowQuoteModal(true)} />
     </div>
   )
 }

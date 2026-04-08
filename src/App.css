@@ -894,18 +894,18 @@ body {
 
 /* Mobile Bottom Navigation - Premium Design */
 .mobile-bottom-nav {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
-  border-top: 2px solid #e8e8e8;
-  z-index: 1000;
-  box-shadow: 0 -8px 24px rgba(0,0,0,0.12);
-  padding: 0;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  display: none !important;
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%) !important;
+  border-top: 2px solid #e8e8e8 !important;
+  z-index: 1000 !important;
+  box-shadow: 0 -8px 24px rgba(0,0,0,0.12) !important;
+  padding: 0 !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
 }
 
 .nav-item {
@@ -1411,11 +1411,11 @@ body {
 
   /* Mobile Bottom Navigation Display */
   .mobile-bottom-nav {
-    display: flex;
+    display: flex !important;
   }
 
   body {
-    padding-bottom: 75px;
+    padding-bottom: 75px !important;
   }
 
   .nav-item {
@@ -1481,6 +1481,25 @@ body {
   .contact-text {
     font-size: 0.85rem;
   }
+}
+
+/* Show mobile bottom nav on specific pages */
+.about-page .mobile-bottom-nav,
+.contact-page .mobile-bottom-nav,
+.reviews-page .mobile-bottom-nav,
+.faq-page .mobile-bottom-nav,
+.services-page .mobile-bottom-nav,
+.gallery-page .mobile-bottom-nav {
+  display: flex !important;
+}
+
+.about-page body,
+.contact-page body,
+.reviews-page body,
+.faq-page body,
+.services-page body,
+.gallery-page body {
+  padding-bottom: 75px !important;
 }
 
 /* Extra small devices (320px and below) */

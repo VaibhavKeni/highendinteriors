@@ -5,6 +5,7 @@ import 'animate.css'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import CitiesSlider from './components/Slider'
+import MobileBottomNav from './components/MobileBottomNav'
 
 function App() {
   const navigate = useNavigate()
@@ -12,7 +13,6 @@ function App() {
   const [dreamFormData, setDreamFormData] = useState({ name: '', phone: '', floorPlan: '', budget: '' })
   const [statusModal, setStatusModal] = useState({ show: false, type: '', message: '' })
   const [isLoading, setIsLoading] = useState(false)
-  const [activeTab, setActiveTab] = useState('home')
   const [showQuoteModal, setShowQuoteModal] = useState(false)
   
   const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -64,18 +64,7 @@ function App() {
     setFormData({ name: '', email: '', phone: '', message: '' })
   }
 
-  const handleNavClick = (tabName: string, path?: string) => {
-    setActiveTab(tabName)
-    if (path) {
-      navigate(path)
-    } else {
-      const sectionId = tabName === 'home' ? 'home' : tabName
-      const element = document.getElementById(sectionId)
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' })
-      }
-    }
-  }
+
 
   const handleDreamFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target
@@ -457,45 +446,7 @@ function App() {
 
       <a href="#" className="btn btn-primary btn-lg-square back-to-top">↑</a>
 
-      <div className="mobile-bottom-nav">
-        <button 
-          className={`nav-item ${activeTab === 'home' ? 'active' : ''}`}
-          onClick={() => handleNavClick('home')}
-        >
-          <i className="fas fa-home"></i>
-          <span>Home</span>
-        </button>
-        <button 
-          className={`nav-item ${activeTab === 'gallery' ? 'active' : ''}`}
-          onClick={() => handleNavClick('gallery', '/gallery')}
-        >
-          <i className="fas fa-images"></i>
-          <span>Gallery</span>
-        </button>
-        <button 
-          className={`nav-item book-now-btn ${activeTab === 'book' ? 'active' : ''}`}
-          onClick={() => {
-            setActiveTab('book')
-          }}
-        >
-          <i className="fas fa-calendar-check"></i>
-          <span>Book Now</span>
-        </button>
-        <button 
-          className={`nav-item ${activeTab === 'reviews' ? 'active' : ''}`}
-          onClick={() => handleNavClick('reviews')}
-        >
-          <i className="fas fa-star"></i>
-          <span>Reviews</span>
-        </button>
-        <button 
-          className={`nav-item ${activeTab === 'contact' ? 'active' : ''}`}
-          onClick={() => handleNavClick('contact', '/contact')}
-        >
-          <i className="fas fa-phone-alt"></i>
-          <span>Contact</span>
-        </button>
-      </div>
+      <MobileBottomNav onBookClick={() => setShowQuoteModal(true)} />
 
       {showQuoteModal && (
         <div className="modal-backdrop show" style={{display: 'block'}}>
