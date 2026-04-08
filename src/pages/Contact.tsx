@@ -79,7 +79,7 @@ function Contact() {
     {
       icon: '🕐',
       title: 'Business Hours',
-      details: 'Mon - Sat: 10:00 AM - 7:00 PM\nSunday: 11:00 AM - 5:00 PM'
+      details: 'Mon - Sat: 09:00 AM - 06:00 PM'
     }
   ]
 

@@ -146,7 +146,7 @@ function About() {
             <h2>Ready to Transform Your Space?</h2>
             <p>Let's create something beautiful together</p>
             <a 
-              href="/contact"
+              href="https://highendinteriors.co.in/contact"
               className="btn btn-primary btn-lg"
             >
               <i className="fas fa-calendar-check me-2"></i>Book a Consultation
