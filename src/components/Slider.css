@@ -25,6 +25,14 @@
   opacity: 1;
 }
 
+.slider__top-heading-interiors {
+  font-family: 'Mistral', cursive;
+  text-transform: none;
+  font-size: 40px;
+  letter-spacing: 0;
+  display: inline-block;
+}
+
 /* .slider__slides {
   position: relative;
   height: 100%;
@@ -361,6 +369,10 @@
     font-size: 40px !important;
   }
   
+  .slider__top-heading-interiors {
+    font-size: 32px !important;
+  }
+  
   .slider__control {
     left: 15px !important;
     right: auto !important;
@@ -393,6 +405,10 @@
     letter-spacing: 4px !important;
   }
   
+  .slider__top-heading-interiors {
+    font-size: 24px !important;
+  }
+  
   .slider__control {
     left: 10px !important;
     right: auto !important;
@@ -419,6 +435,10 @@
   .slider__slide-heading {
     font-size: 18px !important;
     letter-spacing: 2px !important;
+  }
+  
+  .slider__top-heading-interiors {
+    font-size: 18px !important;
   }
   
   .slider__control {

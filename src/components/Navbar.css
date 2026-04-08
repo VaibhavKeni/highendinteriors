@@ -60,10 +60,14 @@
 
 .logo-interiors {
   font-family: 'Mistral', cursive;
-  font-size: 2rem;
+  font-size: 1.8rem !important;
   color: #2c3e50;
-  letter-spacing: 0;
+  letter-spacing: 0 !important;
   font-weight: normal;
+  line-height: 1 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-transform: none !important;
 }
 
 .navbar-nav {
@@ -196,8 +200,12 @@
 
   .logo-interiors {
     font-family: 'Mistral', cursive;
-    font-size: 1.3rem;
+    font-size: 1.4rem !important;
     font-weight: normal;
+    line-height: 1 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-transform: none !important;
   }
 
   .navbar {
@@ -239,13 +247,17 @@
 
 @media (max-width: 480px) {
   .logo, .highend {
-    height: 22px;
+    height: 20px;
   }
 
   .logo-interiors {
     font-family: 'Mistral', cursive;
-    font-size: 1rem;
+    font-size: 1.1rem !important;
     font-weight: normal;
+    line-height: 1 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-transform: none !important;
   }
 
   .navbar {
@@ -293,8 +305,12 @@
 @media (max-width: 320px) {
   .logo-interiors {
     font-family: 'Mistral', cursive;
-    font-size: 0.9rem;
+    font-size: 1rem !important;
     font-weight: normal;
+    line-height: 1 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-transform: none !important;
   }
 
   .nav-link {

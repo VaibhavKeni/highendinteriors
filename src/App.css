@@ -1052,12 +1052,12 @@ body {
 /* Mobile (480px and below) */
 @media (max-width: 480px) {
   .logo, .highend {
-    height: 22px;
+    height: 15px;
   }
 
   .logo-interiors {
     font-family: 'Mistral', cursive;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-weight: normal;
   }
 

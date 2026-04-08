@@ -77,7 +77,7 @@ export default function CitiesSlider() {
   position: "relative",
   height: "100vh",
   color: "#fff" }}> 
-      <p className="slider__top-heading">HIGH END <span style={{ fontFamily: "Mistral", textTransform: 'none', fontSize: '40px',letterSpacing: 0 }}>Interiors</span></p>
+      <p className="slider__top-heading">HIGH END <span className="slider__top-heading-interiors">Interiors</span></p>
       <div className="slider__slides">
         {slides.map((slide, index) => (
           <div
