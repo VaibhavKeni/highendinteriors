@@ -1,19 +1,22 @@
 import { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import './App.css'
 import 'animate.css'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import CitiesSlider from './components/Slider'
 import MobileBottomNav from './components/MobileBottomNav'
+import Loading from './components/Loading'
 
 function App() {
   const navigate = useNavigate()
+  const location = useLocation()
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' })
   const [dreamFormData, setDreamFormData] = useState({ name: '', phone: '', floorPlan: '', budget: '' })
   const [statusModal, setStatusModal] = useState({ show: false, type: '', message: '' })
   const [isLoading, setIsLoading] = useState(false)
   const [showQuoteModal, setShowQuoteModal] = useState(false)
+  const [isPageLoading, setIsPageLoading] = useState(false)
   
   const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -111,6 +114,14 @@ function App() {
   }
 
   useEffect(() => {
+    setIsPageLoading(true)
+    const timer = setTimeout(() => {
+      setIsPageLoading(false)
+    }, 500)
+    return () => clearTimeout(timer)
+  }, [location])
+
+  useEffect(() => {
     const spinner = document.getElementById('spinner')
     if (spinner) {
       setTimeout(() => {
@@ -155,6 +166,8 @@ function App() {
 
   return (
     <div className="app">
+      {isPageLoading && <Loading />}
+      
       <div id="spinner" className="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center" style={{zIndex: 99999}}>
         <div className="spinner-border text-primary" style={{width: '3rem', height: '3rem'}} role="status">
           <span className="visually-hidden">Loading...</span>

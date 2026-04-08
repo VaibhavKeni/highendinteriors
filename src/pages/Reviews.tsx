@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import QuoteModal from '../components/QuoteModal'
@@ -15,6 +15,15 @@ function Reviews() {
   })
   const [submitted, setSubmitted] = useState(false)
   const [showQuoteModal, setShowQuoteModal] = useState(false)
+
+  useEffect(() => {
+    const spinner = document.getElementById('spinner')
+    if (spinner) {
+      setTimeout(() => {
+        spinner.classList.remove('show')
+      }, 1000)
+    }
+  }, [])
 
   const stats = [
     { label: 'Happy Clients', value: '1000+' },
@@ -50,6 +59,11 @@ function Reviews() {
 
   return (
     <div className="reviews-page">
+      <div id="spinner" className="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center" style={{zIndex: 99999}}>
+        <div className="spinner-border text-primary" style={{width: '3rem', height: '3rem'}} role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+      </div>
       <Navbar onQuoteClick={() => setShowQuoteModal(true)} />
       <QuoteModal show={showQuoteModal} onClose={() => setShowQuoteModal(false)} />
 

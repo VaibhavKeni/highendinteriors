@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import QuoteModal from '../components/QuoteModal'
@@ -16,6 +16,15 @@ function FAQ() {
   const [showQuoteModal, setShowQuoteModal] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [expandedId, setExpandedId] = useState<number | null>(null)
+
+  useEffect(() => {
+    const spinner = document.getElementById('spinner')
+    if (spinner) {
+      setTimeout(() => {
+        spinner.classList.remove('show')
+      }, 1000)
+    }
+  }, [])
 
   const faqItems: FAQItem[] = [
     {
@@ -138,6 +147,11 @@ function FAQ() {
 
   return (
     <div className="faq-page">
+      <div id="spinner" className="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center" style={{zIndex: 99999}}>
+        <div className="spinner-border text-primary" style={{width: '3rem', height: '3rem'}} role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+      </div>
       <Navbar onQuoteClick={() => setShowQuoteModal(true)} />
       <QuoteModal show={showQuoteModal} onClose={() => setShowQuoteModal(false)} />
 

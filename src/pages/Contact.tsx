@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import QuoteModal from '../components/QuoteModal'
@@ -13,10 +13,18 @@ function Contact() {
     subject: '',
     message: ''
   })
-  // const [submitted, setSubmitted] = useState(false)
   const [showQuoteModal, setShowQuoteModal] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [statusModal, setStatusModal] = useState({ show: false, type: '', message: '' })
+
+  useEffect(() => {
+    const spinner = document.getElementById('spinner')
+    if (spinner) {
+      setTimeout(() => {
+        spinner.classList.remove('show')
+      }, 1000)
+    }
+  }, [])
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
@@ -97,6 +105,11 @@ function Contact() {
 
   return (
     <div className="contact-page">
+      <div id="spinner" className="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center" style={{zIndex: 99999}}>
+        <div className="spinner-border text-primary" style={{width: '3rem', height: '3rem'}} role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+      </div>
       <Navbar onQuoteClick={() => setShowQuoteModal(true)} />
       <QuoteModal show={showQuoteModal} onClose={() => setShowQuoteModal(false)} />
 

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import QuoteModal from '../components/QuoteModal'
@@ -7,6 +7,15 @@ import './About.css'
 
 function About() {
   const [showQuoteModal, setShowQuoteModal] = useState(false)
+
+  useEffect(() => {
+    const spinner = document.getElementById('spinner')
+    if (spinner) {
+      setTimeout(() => {
+        spinner.classList.remove('show')
+      }, 1000)
+    }
+  }, [])
 
   const achievements = [
     { number: '500+', label: 'Projects Completed', icon: '🏆' },
@@ -40,6 +49,11 @@ function About() {
 
   return (
     <div className="about-page">
+      <div id="spinner" className="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center" style={{zIndex: 99999}}>
+        <div className="spinner-border text-primary" style={{width: '3rem', height: '3rem'}} role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+      </div>
       <Navbar onQuoteClick={() => setShowQuoteModal(true)} />
       <QuoteModal show={showQuoteModal} onClose={() => setShowQuoteModal(false)} />
 

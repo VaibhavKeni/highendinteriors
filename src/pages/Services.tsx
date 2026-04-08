@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import QuoteModal from '../components/QuoteModal'
@@ -18,6 +18,15 @@ interface Service {
 function Services() {
   const [showQuoteModal, setShowQuoteModal] = useState(false)
   const [selectedService, setSelectedService] = useState<Service | null>(null)
+
+  useEffect(() => {
+    const spinner = document.getElementById('spinner')
+    if (spinner) {
+      setTimeout(() => {
+        spinner.classList.remove('show')
+      }, 1000)
+    }
+  }, [])
 
   const services: Service[] = [
     {
@@ -185,6 +194,11 @@ function Services() {
 
   return (
     <div className="services-page">
+      <div id="spinner" className="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center" style={{zIndex: 99999}}>
+        <div className="spinner-border text-primary" style={{width: '3rem', height: '3rem'}} role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+      </div>
       <Navbar onQuoteClick={() => setShowQuoteModal(true)} />
       <QuoteModal show={showQuoteModal} onClose={() => setShowQuoteModal(false)} />
 
