@@ -798,7 +798,7 @@ body {
   transform: translate(-50%, -50%);
   z-index: 1050;
   width: 90%;
-  max-width: 500px;
+  max-width: 380px;
 }
 
 .modal-content {
@@ -808,11 +808,11 @@ body {
 
 .modal-header {
   border-bottom: 1px solid #ddd;
-  padding: 1.5rem;
+  padding: 1rem;
 }
 
 .modal-body {
-  padding: 1.5rem;
+  padding: 1rem;
 }
 
 .btn-close {
