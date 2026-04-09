@@ -83,16 +83,5 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <script>
-      (function(){
-        if(window.location.pathname !== '/' && !window.location.pathname.includes('.')) {
-          var redirect = sessionStorage.redirect;
-          delete sessionStorage.redirect;
-          if (redirect && redirect !== window.location.pathname) {
-            history.replaceState(null, null, redirect);
-          }
-        }
-      }());
-    </script>
   </body>
 </html>
