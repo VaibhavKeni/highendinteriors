@@ -25,15 +25,6 @@ export default function MobileBottomNav({ onBookClick }: MobileBottomNavProps) {
     }
   }, [pathname])
 
-  const handleNavClick = (tabName: string) => {
-    setActiveTab(tabName)
-    const sectionId = tabName === 'home' ? 'home' : tabName
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
-
   return (
     <div className="mobile-bottom-nav">
       <Link 
