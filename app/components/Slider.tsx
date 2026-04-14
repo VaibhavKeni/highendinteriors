@@ -1,0 +1,113 @@
+'use client'
+
+import { useState, useEffect, useCallback } from 'react'
+import '../styles/Slider.css'
+
+interface Slide {
+  title: string
+  subtitle: string
+  img: string
+}
+
+const slides: Slide[] = [
+  {
+    title: 'Living Room',
+    subtitle: 'Modern Design',
+    img: '/assets/images/Dashboard/Living_room.jpg',
+  },
+  {
+    title: 'Kitchen',
+    subtitle: 'Luxury Modular',
+    img: '/assets/images/Dashboard/Kitchen.jpg',
+  },
+  {
+    title: 'Bedroom',
+    subtitle: 'Elegant Space',
+    img: '/assets/images/Dashboard/Bedroom.jpg',
+  },
+  {
+    title: 'Office',
+    subtitle: 'Contemporary',
+    img: '/assets/images/Dashboard/Office.jpg',
+  },
+  {
+    title: 'Dining',
+    subtitle: 'Premium Interior',
+    img: '/assets/images/Dashboard/Dining.jpg',
+  },
+]
+
+const IMAGE_PARTS = 4
+const AUTOCHANGE_TIME = 10000
+
+export default function CitiesSlider() {
+  const [activeSlide, setActiveSlide] = useState(-1)
+  const [prevSlide, setPrevSlide] = useState(-1)
+  const [sliderReady, setSliderReady] = useState(false)
+
+  const changeSlides = useCallback((change: number) => {
+    setPrevSlide(activeSlide)
+    setActiveSlide((prev) => {
+      let next = prev + change
+      if (next < 0) next = slides.length - 1
+      if (next >= slides.length) next = 0
+      return next
+    })
+  }, [activeSlide])
+
+  useEffect(() => {
+    setTimeout(() => {
+      setActiveSlide(0)
+      setSliderReady(true)
+    }, 0)
+  }, [])
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      changeSlides(1)
+    }, AUTOCHANGE_TIME)
+    return () => clearInterval(interval)
+  }, [changeSlides])
+
+  return (
+    <div className={`slider ${sliderReady ? 's--ready' : ''}`} style={{overflow: "hidden",
+  position: "relative",
+  height: "100vh",
+  color: "#fff" }}> 
+      <p className="slider__top-heading">HIGH END <span className="slider__top-heading-interiors">Interiors</span></p>
+      <div className="slider__slides">
+        {slides.map((slide, index) => (
+          <div
+            className={`slider__slide ${activeSlide === index ? 's--active' : ''} ${prevSlide === index ? 's--prev' : ''}`}
+            key={slide.title}
+          >
+            <div className="slider__slide-content">
+              <h3 className="slider__slide-subheading">{slide.subtitle}</h3>
+              <h2 className="slider__slide-heading">
+                {slide.title.split('').map((l, i) => (
+                  <span key={i}>{l}</span>
+                ))}
+              </h2>
+            </div>
+            <div className="slider__slide-parts">
+              {[...Array(IMAGE_PARTS).fill(0)].map((_, i) => (
+                <div className="slider__slide-part" key={i}>
+                  <div
+                    className="slider__slide-part-inner"
+                    style={
+                      {
+                        '--bg-image': `url(${slide.img})`,
+                      } as React.CSSProperties
+                    }
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="slider__control" onClick={() => changeSlides(-1)} />
+      <div className="slider__control slider__control--right" onClick={() => changeSlides(1)} />
+    </div>
+  )
+}

@@ -1,0 +1,128 @@
+/* BackToTop Component Styles */
+.back-to-top {
+  position: fixed !important;
+  bottom: 45px !important;
+  right: 45px !important;
+  z-index: 1001 !important;
+  display: none !important;
+  font-size: 20px !important;
+  line-height: 1 !important;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%) !important;
+  color: white !important;
+  border: none !important;
+  box-shadow: 0 3px 12px rgba(212, 175, 55, 0.3) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  text-decoration: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transform: translateY(15px) scale(0.9) !important;
+  cursor: pointer !important;
+  user-select: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+  width: 40px !important;
+  height: 40px !important;
+  padding: 0 !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50% !important;
+  min-width: 40px !important;
+  min-height: 40px !important;
+  margin: 0 !important;
+  outline: none !important;
+  box-sizing: border-box !important;
+}
+
+.back-to-top:hover,
+.back-to-top:focus,
+.back-to-top:active {
+  background: linear-gradient(135deg, var(--secondary) 0%, #a67c00 100%) !important;
+  color: white !important;
+  transform: translateY(-3px) scale(1.05) !important;
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5) !important;
+  text-decoration: none !important;
+  outline: none !important;
+  border: none !important;
+}
+
+.back-to-top.show {
+  display: flex !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) scale(1) !important;
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 85px !important;
+    right: 15px !important;
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 16px !important;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4) !important;
+    min-width: 38px !important;
+    min-height: 38px !important;
+  }
+
+  .back-to-top:hover {
+    transform: translateY(-2px) scale(1.06) !important;
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6) !important;
+  }
+}
+
+/* Standard Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+  .back-to-top {
+    bottom: 78px !important;
+    right: 10px !important;
+    width: 34px !important;
+    height: 34px !important;
+    font-size: 14px !important;
+    box-shadow: 0 3px 12px rgba(212, 175, 55, 0.4) !important;
+    min-width: 34px !important;
+    min-height: 34px !important;
+  }
+
+  .back-to-top:hover {
+    transform: translateY(-2px) scale(1.04) !important;
+    box-shadow: 0 5px 16px rgba(212, 175, 55, 0.6) !important;
+  }
+}
+
+/* Extra Small Mobile Devices (320px - 360px) */
+@media (max-width: 360px) and (min-width: 321px) {
+  .back-to-top {
+    bottom: 72px !important;
+    right: 6px !important;
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 12px !important;
+    box-shadow: 0 2px 10px rgba(212, 175, 55, 0.4) !important;
+    min-width: 30px !important;
+    min-height: 30px !important;
+  }
+
+  .back-to-top:hover {
+    transform: translateY(-1px) scale(1.03) !important;
+    box-shadow: 0 4px 14px rgba(212, 175, 55, 0.6) !important;
+  }
+}
+
+/* Very Small Mobile Devices (320px and below) */
+@media (max-width: 320px) {
+  .back-to-top {
+    width: 28px !important;
+    height: 28px !important;
+    font-size: 11px !important;
+    bottom: 70px !important;
+    right: 5px !important;
+    box-shadow: 0 2px 8px rgba(212, 175, 55, 0.4) !important;
+    min-width: 28px !important;
+    min-height: 28px !important;
+  }
+
+  .back-to-top:hover {
+    transform: translateY(-1px) scale(1.02) !important;
+    box-shadow: 0 3px 12px rgba(212, 175, 55, 0.6) !important;
+  }
+}
