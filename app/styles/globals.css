@@ -1190,6 +1190,16 @@ a.back-to-top.btn.btn-primary.btn-lg-square.show {
   transform: translateY(-5px);
 }
 
+/* Active Navbar Tab */
+a.nav-link.nav-active {
+  color: #fff !important;
+  font-weight: 800 !important;
+  background: linear-gradient(135deg, #d4af37, #f0c040) !important;
+  border-radius: 6px !important;
+  box-shadow: 0 3px 10px rgba(212, 175, 55, 0.5) !important;
+  padding: 0.4rem 0.9rem !important;
+}
+
 /* Footer */
 .footer a {
   text-decoration: none;

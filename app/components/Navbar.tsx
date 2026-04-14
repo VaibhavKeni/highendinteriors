@@ -20,17 +20,14 @@ export default function Navbar({ onQuoteClick }: NavbarProps) {
   }
 
   const isActive = (path: string) => {
-    return pathname === path
+    if (path === '/') return pathname === '/' || pathname === ''
+    return pathname === path || pathname === path + '/'
   }
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+    <nav className="navbar navbar-expand-lg bg-white sticky-top custom-navbar">
       <div className="container-fluid px-3 px-md-4">
-        <Link 
-          href="/" 
-          className="logo-container d-flex align-items-center" 
-          style={{textDecoration: 'none'}}
-        >
+        <Link href="/" className="logo-container d-flex align-items-center" style={{textDecoration: 'none'}}>
           <img className="logo" src="/logo.png" alt="Logo" onError={(e) => e.currentTarget.style.display = 'none'} />
           <img className="highend" src="/high_end.png" alt="HIGH END" onError={(e) => e.currentTarget.style.display = 'none'} />
           <span className="logo-interiors">Interiors</span>
@@ -40,76 +37,38 @@ export default function Navbar({ onQuoteClick }: NavbarProps) {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
-              <Link 
-                className={`nav-link ${isActive('/') ? 'active' : ''}`}
-                href="/"
-                onClick={handleNavClick}
-              >
-                Home
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link 
-                className={`nav-link ${isActive('/about') ? 'active' : ''}`}
-                href="/about"
-                onClick={handleNavClick}
-              >
-                About us
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link 
-                className={`nav-link ${isActive('/services') ? 'active' : ''}`}
-                href="/services"
-                onClick={handleNavClick}
-              >
-                Services
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link 
-                className={`nav-link ${isActive('/gallery') ? 'active' : ''}`}
-                href="/gallery"
-                onClick={handleNavClick}
-              >
-                Gallery
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link 
-                className={`nav-link ${isActive('/reviews') ? 'active' : ''}`}
-                href="/reviews"
-                onClick={handleNavClick}
-              >
-                Reviews
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link 
-                className={`nav-link ${isActive('/faq') ? 'active' : ''}`}
-                href="/faq"
-                onClick={handleNavClick}
-              >
-                FAQ
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link 
-                className={`nav-link ${isActive('/contact') ? 'active' : ''}`}
-                href="/contact"
-                onClick={handleNavClick}
-              >
-                Contact
-              </Link>
-            </li>
+            {[
+              { path: '/', label: 'Home' },
+              { path: '/about', label: 'About us' },
+              { path: '/services', label: 'Services' },
+              { path: '/gallery', label: 'Gallery' },
+              { path: '/reviews', label: 'Reviews' },
+              { path: '/faq', label: 'FAQ' },
+              { path: '/contact', label: 'Contact' },
+            ].map(({ path, label }) => (
+              <li className="nav-item" key={path}>
+                <Link
+                  className={`nav-link ${isActive(path) ? 'nav-active' : ''}`}
+                  href={path}
+                  onClick={handleNavClick}
+                  style={isActive(path) ? {
+                    color: '#ffffff',
+                    background: 'linear-gradient(135deg, #d4af37, #f0c040)',
+                    borderRadius: '6px',
+                    fontWeight: '800',
+                    boxShadow: '0 3px 10px rgba(212,175,55,0.5)',
+                    padding: '0.4rem 0.9rem',
+                    textDecoration: 'none',
+                  } : { color: '#555' }}
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
             <li className="nav-item mobile-quote-btn">
-              <button 
-                className="btn btn-primary" 
-                onClick={() => {
-                  onQuoteClick?.()
-                  handleNavClick()
-                }}
+              <button
+                className="btn btn-primary"
+                onClick={() => { onQuoteClick?.(); handleNavClick() }}
               >
                 Get a Quote
               </button>

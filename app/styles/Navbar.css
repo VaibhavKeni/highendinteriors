@@ -87,12 +87,12 @@
 }
 
 .nav-link {
-  color: #555 !important;
+  color: #555;
   font-weight: 700 !important;
   font-size: 0.8rem !important;
   padding: 0.5rem 0.8rem !important;
-  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-  border-radius: 4px;
+  transition: background 0.3s ease, color 0.3s ease;
+  border-radius: 6px;
   letter-spacing: 0.3px;
   display: inline-block;
   position: relative;
@@ -100,26 +100,20 @@
 
 .nav-link:hover {
   color: #d4af37 !important;
-  background: rgba(212, 175, 55, 0.1);
+  background: rgba(212, 175, 55, 0.1) !important;
   transform: translateY(-2px);
 }
 
-.nav-link.active {
-  color: #d4af37 !important;
+.nav-link.nav-active {
+  color: #fff !important;
   font-weight: 800 !important;
-  position: relative;
+  background: linear-gradient(135deg, #d4af37, #f0c040) !important;
+  border-radius: 6px !important;
+  box-shadow: 0 3px 10px rgba(212, 175, 55, 0.5) !important;
+  padding: 0.4rem 0.9rem !important;
+  transform: none !important;
 }
 
-.nav-link.active::before {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: #d4af37;
-  border-radius: 2px;
-}
 
 @keyframes activeNavPulse {
   0% {
