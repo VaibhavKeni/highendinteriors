@@ -266,19 +266,15 @@ export default function Contact() {
           <div className="social-links">
             <a href="https://www.instagram.com/highend_interiors9" target="_blank" rel="noopener noreferrer" className="social-btn instagram">
               <i className="fab fa-instagram"></i>
-              <span>Instagram</span>
             </a>
             <a href="https://www.facebook.com/profile.php?id=100063596333131" target="_blank" rel="noopener noreferrer" className="social-btn facebook">
               <i className="fab fa-facebook"></i>
-              <span>Facebook</span>
             </a>
             <a href="https://wa.me/919867818123" target="_blank" rel="noopener noreferrer" className="social-btn whatsapp">
               <i className="fab fa-whatsapp"></i>
-              <span>WhatsApp</span>
             </a>
             <a href="tel:+919867818123" className="social-btn phone">
               <i className="fas fa-phone"></i>
-              <span>Call Us</span>
             </a>
           </div>
         </div>

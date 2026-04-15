@@ -7,7 +7,7 @@ import BackToTop from './components/BackToTop'
 export const metadata: Metadata = {
   title: 'HIGHEND Interiors - Premium Interior Design in Mumbai | Home & Office Interiors',
   description: 'HIGHEND Interiors offers premium interior design services in Mumbai. Specializing in residential, commercial, modular kitchens, and bedroom designs. 15+ years experience, 500+ projects completed.',
-  keywords: 'interior design Mumbai, home interior design, office interior design, modular kitchen Mumbai, bedroom design, living room design, interior designer Mumbai, Vile Parle interior designer, residential interior, commercial interior',
+  keywords: 'Interior Decorators In Mumbai, Commercial Interior Design In Mumbai, Residential Interior Designers In Mumbai, Living Room Interior Design In Mumbai, Kitchen Interior Design In Mumbai, Bedroom Interior Design In Mumbai, Shop Interior Design In Mumbai, Office Interior Design In Mumbai, Furniture Designers In Mumbai, Home Interior Designer In Mumbai, Best Interior Designers In Mumbai, Interior Designers In Mumbai, Interior Designer In Vile Parle Mumbai, interior design Mumbai, modular kitchen Mumbai, Vile Parle interior designer, residential interior, commercial interior',
   authors: [{ name: 'HIGHEND Interiors' }],
   openGraph: {
     title: 'HIGHEND Interiors - Premium Interior Design in Mumbai',

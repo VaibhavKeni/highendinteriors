@@ -83,826 +83,188 @@
   letter-spacing: 0.5px;
 }
 
+/* Google Banner */
+.google-banner-section {
+  background: white;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.google-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, rgba(212,175,55,0.08), rgba(184,148,31,0.08));
+  border: 1px solid rgba(212,175,55,0.3);
+  border-radius: 14px;
+  padding: 1.25rem 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.google-banner-left {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.google-g-icon {
+  font-size: 2.8rem;
+  color: #d4af37;
+}
+
+.google-banner-rating {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #2c3e50;
+  line-height: 1;
+}
+
+.google-banner-stars i {
+  color: #ffc107;
+  font-size: 1rem;
+}
+
+.google-banner-count {
+  color: #666;
+  font-size: 0.85rem;
+  margin-top: 0.2rem;
+}
+
+/* Elfsight Widget Section */
+.elfsight-section {
+  padding: 4rem 0;
+  background: #f9f9f9;
+}
+
+/* Reviews Grid */
 .reviews-grid-section {
   padding: 4rem 0;
-  background: white;
+  background: #f9f9f9;
 }
 
 .reviews-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
 }
 
 .review-card {
   background: white;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border-top: 4px solid #d4af37;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 3px solid #d4af37;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .review-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
 }
 
-.review-header {
+.review-card-header {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 1rem;
-}
-
-.reviewer-info {
-  display: flex;
-  gap: 1rem;
   align-items: center;
+  gap: 0.75rem;
 }
 
-.reviewer-image {
-  width: 50px;
-  height: 50px;
+.reviewer-avatar-img {
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   object-fit: cover;
+  flex-shrink: 0;
 }
 
-.reviewer-info h4 {
-  color: #2c3e50;
+.reviewer-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d4af37, #b8941f);
+  color: white;
+  font-size: 1.2rem;
   font-weight: 700;
-  margin-bottom: 0.25rem;
-  font-size: 1rem;
-}
-
-.review-date {
-  color: #999;
-  font-size: 0.85rem;
-  margin: 0;
-}
-
-.stars {
   display: flex;
-  gap: 0.25rem;
-  margin-bottom: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
-.stars i {
-  color: #ddd;
-  font-size: 1rem;
-}
-
-.stars i.filled {
-  color: #ffc107;
-}
-
-.review-title {
-  color: #2c3e50;
+.reviewer-name {
   font-weight: 700;
-  margin-bottom: 0.75rem;
+  color: #2c3e50;
+  font-size: 0.95rem;
+}
+
+.reviewer-date {
+  color: #999;
+  font-size: 0.8rem;
+}
+
+.review-google-icon {
+  color: #d4af37;
   font-size: 1.1rem;
 }
 
-.review-text {
-  color: #666;
-  line-height: 1.6;
-  font-size: 0.95rem;
-}
-
-.verified-badge {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: #e8f5e9;
-  color: #4caf50;
-  padding: 0.4rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
-.verified-badge i {
+.review-stars i {
+  color: #ffc107;
   font-size: 0.9rem;
 }
 
-.review-rating {
-  margin-bottom: 1rem;
-}
-
-/* Google Reviews Section */
-.google-reviews-section {
-  padding: 4rem 2rem;
-  background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
-}
-
-.google-reviews-content {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.google-icon {
-  font-size: 4rem;
-  color: #d4af37;
-  margin-bottom: 1.5rem;
-}
-
-.google-reviews-content h2 {
-  font-size: 2rem;
-  color: #2c3e50;
-  margin-bottom: 1rem;
-  font-weight: 800;
-}
-
-.google-reviews-content p {
-  color: #666;
-  font-size: 1rem;
-  margin-bottom: 2rem;
-  line-height: 1.6;
-}
-
-/* Google Reviews Container */
-.google-reviews-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: center;
-  margin-top: 2rem;
-}
-
-.google-reviews-embed {
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-}
-
-.google-reviews-info {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.google-rating-box {
-  background: white;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  text-align: center;
-  border-top: 4px solid #d4af37;
-}
-
-.rating-stars {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.rating-stars i {
-  color: #ffc107;
-  font-size: 1.5rem;
-}
-
-.rating-text {
-  font-size: 1.5rem;
-  color: #2c3e50;
-  font-weight: 800;
-  margin-bottom: 0.5rem;
-}
-
-.review-count {
-  color: #666;
-  font-size: 0.95rem;
+.review-text {
+  color: #555;
+  line-height: 1.65;
+  font-size: 0.9rem;
   margin: 0;
 }
 
-.google-reviews-cta {
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(184, 148, 31, 0.1) 100%);
-  padding: 2rem;
-  border-radius: 12px;
-  border-left: 4px solid #d4af37;
+.load-more-btn {
+  border-color: #d4af37;
+  color: #d4af37;
+  padding: 0.6rem 2rem;
+  font-weight: 600;
 }
 
-.google-reviews-cta h3 {
-  color: #2c3e50;
-  font-size: 1.3rem;
-  font-weight: 800;
-  margin-bottom: 0.75rem;
+.load-more-btn:hover {
+  background: #d4af37;
+  color: white;
 }
 
-.google-reviews-cta p {
-  color: #666;
-  font-size: 0.95rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
-}
-
-/* Review Form Section */
-.review-form-section {
-  padding: 4rem 0;
-  background: white;
-}
-
+/* section-title / subtitle shared */
 .section-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #2c3e50;
   text-align: center;
-  margin-bottom: 1rem;
   font-weight: 800;
 }
 
 .section-subtitle {
   text-align: center;
   color: #666;
-  font-size: 1.1rem;
-  margin-bottom: 3rem;
-}
-
-.form-container {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.review-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-group label {
-  color: #2c3e50;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  font-size: 0.95rem;
-}
-
-.form-group input,
-.form-group textarea {
-  padding: 0.75rem 1rem;
-  border: 2px solid #e0e0e0;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  font-family: inherit;
-  transition: all 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: #d4af37;
-  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
-}
-
-.form-group textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-/* Rating Selector */
-.rating-selector {
-  display: flex;
-  gap: 0.75rem;
-}
-
-.star-btn {
-  background: transparent;
-  border: 2px solid #e0e0e0;
-  color: #ddd;
-  width: 50px;
-  height: 50px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1.5rem;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.star-btn:hover {
-  border-color: #d4af37;
-  color: #ffc107;
-  transform: scale(1.1);
-}
-
-.star-btn.active {
-  background: #d4af37;
-  border-color: #d4af37;
-  color: white;
-}
-
-.btn-submit {
-  padding: 1rem 2rem;
   font-size: 1rem;
-  font-weight: 700;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
-  color: white;
-  margin-top: 1rem;
-}
-
-.btn-submit:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
-}
-
-.success-message {
-  background: #d4edda;
-  color: #155724;
-  padding: 1rem;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-weight: 600;
-  animation: slideIn 0.3s ease-out;
-}
-
-.success-message i {
-  font-size: 1.2rem;
-}
-
-@keyframes slideIn {
-  from {
-    transform: translateY(-10px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-/* Why Reviews Section */
-.why-reviews-section {
-  padding: 4rem 0;
-  background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
-}
-
-.reasons-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.reason-card {
-  background: white;
-  padding: 2rem;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border-left: 4px solid #d4af37;
-}
-
-.reason-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-}
-
-.reason-icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.reason-card h3 {
-  color: #2c3e50;
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-bottom: 0.75rem;
-}
-
-.reason-card p {
-  color: #666;
-  line-height: 1.6;
-  font-size: 0.95rem;
-}
-
-/* Reviews Widget Section */
-.reviews-widget-section {
-  background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
-}
-
-.reviews-widget-container {
-  background: white;
-  padding: 3rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  text-align: center;
-}
-
-.widget-info {
-  color: #666;
-  font-size: 1rem;
-  margin-bottom: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.widget-info i {
-  color: #d4af37;
-  font-size: 1.2rem;
-}
-
-.widget-cta {
-  margin-bottom: 2rem;
-}
-
-.reviews-preview {
-  text-align: left;
-  margin-top: 2rem;
-  padding-top: 2rem;
-  border-top: 2px solid #f0f0f0;
-}
-
-.reviews-preview h3 {
-  color: #2c3e50;
-  font-size: 1.3rem;
-  font-weight: 800;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.benefits-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-}
-
-.benefits-list li {
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(184, 148, 31, 0.05) 100%);
-  padding: 1rem;
-  border-radius: 8px;
-  color: #666;
-  font-size: 0.95rem;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  border-left: 4px solid #d4af37;
-}
-
-.benefits-list i {
-  color: #d4af37;
-  font-size: 1.1rem;
-  flex-shrink: 0;
-}
-
-/* Loading Spinner */
-.loading-spinner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.loading-spinner .spinner-border {
-  width: 3rem;
-  height: 3rem;
-  margin-bottom: 1rem;
-}
-
-.loading-spinner p {
-  color: #666;
-  font-size: 1rem;
-  margin: 0;
-}
-
-/* No Reviews */
-.no-reviews {
-  text-align: center;
-  padding: 3rem 2rem;
-  background: #f9f9f9;
-  border-radius: 12px;
-  color: #666;
-}
-
-.no-reviews p {
-  margin: 0;
-  font-size: 1rem;
-}
-
-.no-reviews a {
-  color: #d4af37;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.no-reviews a:hover {
-  text-decoration: underline;
-}
-
-/* Alert */
-.alert {
-  padding: 1rem 1.5rem;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.alert-warning {
-  background: #fff3cd;
-  border: 1px solid #ffc107;
-  color: #856404;
-}
-
-.alert a {
-  color: #d4af37;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.alert a:hover {
-  text-decoration: underline;
+  margin-bottom: 2.5rem;
 }
 
 @media (max-width: 768px) {
-  .reviews-header h1 {
-    font-size: 2rem;
-  }
-
-  .reviews-header p {
-    font-size: 1rem;
-  }
-
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
-
-  .reviews-grid {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-
-  .reasons-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .google-reviews-content h2 {
-    font-size: 1.5rem;
-  }
-
-  .google-reviews-container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .google-reviews-embed iframe {
-    height: 400px !important;
-  }
-
-  .google-rating-box {
-    padding: 1.5rem;
-  }
-
-  .rating-text {
-    font-size: 1.3rem;
-  }
-
-  .google-reviews-cta {
-    padding: 1.5rem;
-  }
-
-  .google-reviews-cta h3 {
-    font-size: 1.1rem;
-  }
-
-  .google-reviews-cta p {
-    font-size: 0.9rem;
-  }
-
-  .reviews-widget-container {
-    padding: 2rem;
-  }
-
-  .widget-info {
-    font-size: 0.95rem;
-  }
-
-  .reviews-preview h3 {
-    font-size: 1.1rem;
-  }
-
-  .benefits-list {
-    grid-template-columns: 1fr;
-  }
-
-  .benefits-list li {
-    padding: 0.75rem;
-    font-size: 0.9rem;
-  }
+  .reviews-header h1 { font-size: 2rem; }
+  .reviews-header p { font-size: 1rem; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .reviews-grid { grid-template-columns: 1fr 1fr; }
+  .google-banner { flex-direction: column; text-align: center; }
+  .google-banner-left { justify-content: center; }
 }
 
 @media (max-width: 480px) {
-  /* .reviews-page {
-    padding-bottom: 75px;
-  } */
-
-  .reviews-header {
-    padding: 2rem 1rem;
-  }
-
-  .reviews-header h1 {
-    font-size: 1.5rem;
-  }
-
-  .reviews-header p {
-    font-size: 0.9rem;
-  }
-
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-
-  .stat-card {
-    padding: 1.5rem;
-  }
-
-  .stat-value {
-    font-size: 2rem;
-  }
-
-  .stat-label {
-    font-size: 0.85rem;
-  }
-
-  .reviews-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .review-card {
-    padding: 1.5rem;
-  }
-
-  .reviewer-image {
-    width: 40px;
-    height: 40px;
-  }
-
-  .reviewer-info h4 {
-    font-size: 0.95rem;
-  }
-
-  .review-title {
-    font-size: 1rem;
-  }
-
-  .review-text {
-    font-size: 0.9rem;
-  }
-
-  .form-container {
-    max-width: 100%;
-  }
-
-  .form-group label {
-    font-size: 0.9rem;
-  }
-
-  .form-group input,
-  .form-group textarea {
-    padding: 0.6rem 0.8rem;
-    font-size: 0.9rem;
-  }
-
-  .rating-selector {
-    gap: 0.5rem;
-  }
-
-  .star-btn {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
-  }
-
-  .btn-submit {
-    padding: 0.75rem 1.5rem;
-    font-size: 0.9rem;
-  }
-
-  .reasons-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .reason-card {
-    padding: 1.5rem;
-  }
-
-  .reason-icon {
-    font-size: 2rem;
-  }
-
-  .reason-card h3 {
-    font-size: 1rem;
-  }
-
-  .reason-card p {
-    font-size: 0.85rem;
-  }
-
-  .google-reviews-content h2 {
-    font-size: 1.3rem;
-  }
-
-  .google-reviews-content p {
-    font-size: 0.9rem;
-  }
-
-  .google-icon {
-    font-size: 3rem;
-  }
-
-  .google-reviews-container {
-    gap: 1.5rem;
-  }
-
-  .google-reviews-embed iframe {
-    height: 300px !important;
-  }
-
-  .google-rating-box {
-    padding: 1rem;
-  }
-
-  .rating-stars {
-    gap: 0.25rem;
-  }
-
-  .rating-stars i {
-    font-size: 1.2rem;
-  }
-
-  .rating-text {
-    font-size: 1.1rem;
-  }
-
-  .review-count {
-    font-size: 0.85rem;
-  }
-
-  .google-reviews-cta {
-    padding: 1rem;
-  }
-
-  .google-reviews-cta h3 {
-    font-size: 1rem;
-  }
-
-  .google-reviews-cta p {
-    font-size: 0.85rem;
-    margin-bottom: 1rem;
-  }
-
-  .reviews-widget-container {
-    padding: 1.5rem;
-  }
-
-  .widget-info {
-    font-size: 0.85rem;
-    flex-direction: column;
-    gap: 0.25rem;
-  }
-
-  .reviews-preview h3 {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .benefits-list li {
-    padding: 0.6rem;
-    font-size: 0.85rem;
-  }
-
-  .benefits-list i {
-    font-size: 1rem;
-  }
+  .reviews-header { padding: 2rem 1rem; }
+  .reviews-header h1 { font-size: 1.5rem; }
+  .reviews-header p { font-size: 0.9rem; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+  .stat-card { padding: 1.25rem; }
+  .stat-value { font-size: 1.8rem; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .section-title { font-size: 1.5rem; }
 }

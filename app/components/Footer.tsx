@@ -116,6 +116,31 @@ export default function Footer() {
           </div>
         </div>
         <hr className="my-3 my-md-4" />
+        <div className="top-searches">
+          <h6 className="top-searches-title">Top Searches</h6>
+          <div className="top-searches-links">
+            {[
+              'Interior Decorators In Mumbai',
+              'Commercial Interior Design In Mumbai',
+              'Residential Interior Designers In Mumbai',
+              'Living Room Interior Design In Mumbai',
+              'Kitchen Interior Design In Mumbai',
+              'Bedroom Interior Design In Mumbai',
+              'Shop Interior Design In Mumbai',
+              'Office Interior Design In Mumbai',
+              'Furniture Designers In Mumbai',
+              'Home Interior Designer In Mumbai',
+              'Best Interior Designers In Mumbai',
+              'Interior Designers In Mumbai',
+              'Interior Designer In Vile Parle Mumbai',
+            ].map((term) => (
+              <Link key={term} href="/services" className="top-search-tag" onClick={handleNavClick}>
+                {term}
+              </Link>
+            ))}
+          </div>
+        </div>
+        <hr className="my-3 my-md-4" />
         <div className="text-center">
           <p className="mb-0">&copy; 2024 HIGH END Interiors. All rights reserved.</p>
         </div>

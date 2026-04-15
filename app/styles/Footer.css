@@ -100,3 +100,40 @@
     margin-bottom: 0.5rem;
   }
 }
+
+/* Top Searches */
+.top-searches {
+  margin-bottom: 0.5rem;
+}
+
+.top-searches-title {
+  color: #d4af37;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.top-searches-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.top-search-tag {
+  color: #999;
+  font-size: 0.8rem;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.top-search-tag:hover {
+  color: #d4af37;
+  border-color: #d4af37;
+  background: rgba(212, 175, 55, 0.08);
+}
