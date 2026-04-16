@@ -1,17 +1,47 @@
 {
-  "rating": 4.8,
-  "total": 450,
+  "rating": 5,
+  "total": 20,
   "reviews": [
-    { "name": "Priya Sharma", "avatar": "", "rating": 5, "text": "Absolutely stunning work! HIGHEND Interiors transformed our 3BHK into a dream home. The team was professional, punctual, and the quality of materials used was top-notch. Highly recommend!", "date": "March 2025", "url": "https://maps.app.goo.gl/YraiHXFWgaJHuPpS6" },
-    { "name": "Rajesh Mehta", "avatar": "", "rating": 5, "text": "Best interior designers in Mumbai! They completed our office interior on time and within budget. The design was modern and functional. Our employees love the new workspace.", "date": "February 2025", "url": "https://maps.app.goo.gl/YraiHXFWgaJHuPpS6" },
-    { "name": "Sunita Patel", "avatar": "", "rating": 5, "text": "Exceptional service from start to finish. The team understood our vision perfectly and delivered beyond expectations. Our living room looks like it's straight out of a magazine!", "date": "February 2025", "url": "https://maps.app.goo.gl/YraiHXFWgaJHuPpS6" },
-    { "name": "Amit Desai", "avatar": "", "rating": 5, "text": "Outstanding work on our modular kitchen. The quality of cabinets and fittings is excellent. The team was very cooperative and addressed all our concerns promptly.", "date": "January 2025", "url": "https://maps.app.goo.gl/YraiHXFWgaJHuPpS6" },
-    { "name": "Kavita Nair", "avatar": "", "rating": 5, "text": "HIGHEND Interiors did a fantastic job with our bedroom interior. The false ceiling design and wardrobe work is beautiful. Very satisfied with the overall experience.", "date": "January 2025", "url": "https://maps.app.goo.gl/YraiHXFWgaJHuPpS6" },
-    { "name": "Vikram Singh", "avatar": "", "rating": 5, "text": "Hired them for our shop interior in Vile Parle. The design was creative and the execution was flawless. Our customers love the new look. Great value for money!", "date": "December 2024", "url": "https://maps.app.goo.gl/YraiHXFWgaJHuPpS6" },
-    { "name": "Meera Joshi", "avatar": "", "rating": 5, "text": "Wonderful experience working with HIGHEND Interiors. They transformed our old apartment into a modern, stylish home. The attention to detail is remarkable.", "date": "December 2024", "url": "https://maps.app.goo.gl/YraiHXFWgaJHuPpS6" },
-    { "name": "Suresh Kumar", "avatar": "", "rating": 5, "text": "Professional team with great design sense. They completed our 2BHK interior in just 45 days. The quality of work is excellent and the pricing was transparent.", "date": "November 2024", "url": "https://maps.app.goo.gl/YraiHXFWgaJHuPpS6" },
-    { "name": "Anita Verma", "avatar": "", "rating": 5, "text": "Highly recommend HIGHEND Interiors for anyone looking for quality interior work in Mumbai. They did our entire home and the results are breathtaking.", "date": "November 2024", "url": "https://maps.app.goo.gl/YraiHXFWgaJHuPpS6" },
-    { "name": "Deepak Gupta", "avatar": "", "rating": 5, "text": "Excellent work on our restaurant interior. The ambiance they created is exactly what we wanted. Professional team, timely delivery, and great after-service support.", "date": "October 2024", "url": "https://maps.app.goo.gl/YraiHXFWgaJHuPpS6" }
+    {
+      "name": "Anuradha Vernekar",
+      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjVj87KZjJ8AB3g2ICVzbSIy3OH_JGuk-RbgLEYTDVEY7TCsyVlD=s128-c0x00000000-cc-rp-mo",
+      "rating": 5,
+      "text": "Great experience working with HIGHEND  interiors, great team members....quality work, genuine materials used for my home interior by them, great designs concepts, on-time delivery of projects...affordable quote...I highly recommend HIGHEND interiors for interior projects 👍👍👍",
+      "date": "March 2026",
+      "url": "https://www.google.com/maps/contrib/107370918341116977448/reviews"
+    },
+    {
+      "name": "Vaibhav Pavaskar",
+      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjW-BcNhi9XgrnxHeC6EKD6OG9BrTI8_AnoOq-SndWBsuq8yGM0=s128-c0x00000000-cc-rp-mo",
+      "rating": 5,
+      "text": "Working with Highend Interiors was a very great experience. 👍🏻",
+      "date": "March 2026",
+      "url": "https://www.google.com/maps/contrib/117649111161111617792/reviews"
+    },
+    {
+      "name": "aaKaSh",
+      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjVD3II2W1ZxPDg6N2J0tNiAsaCnNPOCTeAVe85x6LHlkmCF2l8=s128-c0x00000000-cc-rp-mo",
+      "rating": 5,
+      "text": "\"Excellent work by Gautam Vernekar and the Highend Interiors team. Clean design, premium finish, and great attention to detail!\"",
+      "date": "March 2026",
+      "url": "https://www.google.com/maps/contrib/106112128508171985495/reviews"
+    },
+    {
+      "name": "sandeep mandhare",
+      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJuJAroUKknv_8lzJvUoaPjwISCnzh_KaiAC-8jQ2c3IbzDjQ=s128-c0x00000000-cc-rp-mo",
+      "rating": 5,
+      "text": "",
+      "date": "March 2026",
+      "url": "https://www.google.com/maps/contrib/110526207255656464034/reviews"
+    },
+    {
+      "name": "Milind Damle",
+      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocI5lPrfYjd0KnVmiU0NRnYnDg5d-pE3czo95yEd2L-WCWWrDA=s128-c0x00000000-cc-rp-mo",
+      "rating": 5,
+      "text": "The work done by highend was with in a time given by them with perfectionand  no flows. After a year of work they came for the small work also this was never expected  because others don't.I  am very satisfied with their work n will suggest to give a chance to them .They are reasonable compared to others in the market with same quality of work",
+      "date": "March 2026",
+      "url": "https://www.google.com/maps/contrib/113288793831454816138/reviews"
+    }
   ],
-  "fetchedAt": "2025-01-01T00:00:00.000Z"
+  "fetchedAt": "2026-04-16T10:56:32.115Z"
 }
