@@ -5,28 +5,39 @@ import './styles/globals.css'
 import BackToTop from './components/BackToTop'
 
 export const metadata: Metadata = {
-  title: 'HIGHEND Interiors - Premium Interior Design in Mumbai | Home & Office Interiors',
-  description: 'HIGHEND Interiors offers premium interior design services in Mumbai. Specializing in residential, commercial, modular kitchens, and bedroom designs. 15+ years experience, 500+ projects completed.',
-  keywords: 'Interior Decorators In Mumbai, Commercial Interior Design In Mumbai, Residential Interior Designers In Mumbai, Living Room Interior Design In Mumbai, Kitchen Interior Design In Mumbai, Bedroom Interior Design In Mumbai, Shop Interior Design In Mumbai, Office Interior Design In Mumbai, Furniture Designers In Mumbai, Home Interior Designer In Mumbai, Best Interior Designers In Mumbai, Interior Designers In Mumbai, Interior Designer In Vile Parle Mumbai, interior design Mumbai, modular kitchen Mumbai, Vile Parle interior designer, residential interior, commercial interior',
+  title: 'Best Interior Designer in Mumbai | Affordable & Luxury Home Interiors — HIGHEND Interiors',
+  description: 'HIGHEND Interiors — Best interior designer in Mumbai for residential & commercial spaces. Affordable & luxury home interiors, modular kitchens, office design. Vile Parle, Andheri, Bandra, Thane. 15+ years | 500+ projects | 5★ Google rating. Call +91 83558 88976.',
+  keywords: 'interior designers near me, best interior designer in Mumbai, home interior design services, residential interior designer Mumbai, commercial interior designer Mumbai, luxury interior designers Mumbai, flat interior design Mumbai, office interior design services, turnkey interior solutions Mumbai, affordable interior designers near me, interior designer in Andheri, interior designer in Thane, interior designer in Navi Mumbai, interior designer in Borivali, interior designer near Bandra, interior decorator Mumbai, home renovation Mumbai, kitchen interior designer Mumbai, 2BHK interior design cost Mumbai, modular kitchen design Mumbai, wardrobe design services Mumbai, living room interior design ideas, bedroom interior design services, office cabin interior design, false ceiling design Mumbai, TV unit design modern, small house interior design, cost of interior design for 2BHK in Mumbai, best budget interior designer in Mumbai, modern interior design ideas for small flats, how much does home interior cost in Mumbai, latest interior design trends in India, low budget home interior design ideas, interior design ideas 2026, modern home decor ideas India, small space interior design tips, vastu tips for home interior, color combinations for living room, trending kitchen designs India, bedroom lighting ideas, luxury villa interior designers Mumbai, premium home interior designers, low budget interior designers Mumbai, affordable home interior design, corporate office interior design Mumbai, startup office design ideas, Interior Decorators In Mumbai, Commercial Interior Design In Mumbai, Residential Interior Designers In Mumbai, Living Room Interior Design In Mumbai, Kitchen Interior Design In Mumbai, Bedroom Interior Design In Mumbai, Shop Interior Design In Mumbai, Office Interior Design In Mumbai, Furniture Designers In Mumbai, Home Interior Designer In Mumbai, Best Interior Designers In Mumbai, Interior Designers In Mumbai, Interior Designer In Vile Parle Mumbai',
   authors: [{ name: 'HIGHEND Interiors' }],
+  alternates: {
+    canonical: 'https://highendinteriors.co.in',
+  },
   openGraph: {
-    title: 'HIGHEND Interiors - Premium Interior Design in Mumbai',
-    description: 'Transform your space with HIGHEND Interiors. Expert interior design services for homes and offices in Mumbai.',
+    title: 'Best Interior Designer in Mumbai | Affordable & Luxury Home Interiors — HIGHEND Interiors',
+    description: 'HIGHEND Interiors — Best interior designer in Mumbai. Affordable & luxury home interiors, modular kitchens, office design. 15+ years | 500+ projects | 5★ Google rating.',
     type: 'website',
     url: 'https://highendinteriors.co.in',
+    siteName: 'HIGHEND Interiors',
+    locale: 'en_IN',
     images: [
       {
         url: 'https://highendinteriors.co.in/og-image.jpg',
         width: 1200,
         height: 630,
+        alt: 'HIGHEND Interiors - Best Interior Designer in Mumbai',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'HIGHEND Interiors - Premium Interior Design in Mumbai',
-    description: 'Transform your space with HIGHEND Interiors. Expert interior design services for homes and offices in Mumbai.',
+    title: 'Best Interior Designer in Mumbai | HIGHEND Interiors',
+    description: 'Affordable & luxury home interiors in Mumbai. 15+ years | 500+ projects | 5★ Google rating.',
     images: ['https://highendinteriors.co.in/twitter-image.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
   },
 }
 

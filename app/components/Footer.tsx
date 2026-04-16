@@ -1,9 +1,12 @@
 'use client'
 
+import { useState } from 'react'
 import Link from 'next/link'
 import '../styles/Footer.css'
 
 export default function Footer() {
+  const [showTopSearches, setShowTopSearches] = useState(false)
+
   const handleNavClick = () => {
     window.scrollTo(0, 0)
   }
@@ -117,25 +120,40 @@ export default function Footer() {
         </div>
         <hr className="my-3 my-md-4" />
         <div className="top-searches">
-          <h6 className="top-searches-title">Top Searches</h6>
-          <div className="top-searches-links">
+          <h6 className={`top-searches-title ${showTopSearches ? '' : 'collapsed'}`} onClick={() => setShowTopSearches(!showTopSearches)}>
+            <i className="fas fa-chevron-down"></i>
+            {showTopSearches ? 'Hide' : 'Show'} Top Searches
+          </h6>
+          <div className={`top-searches-links ${showTopSearches ? '' : 'hidden'}`}>
             {[
-              'Interior Decorators In Mumbai',
-              'Commercial Interior Design In Mumbai',
-              'Residential Interior Designers In Mumbai',
-              'Living Room Interior Design In Mumbai',
-              'Kitchen Interior Design In Mumbai',
-              'Bedroom Interior Design In Mumbai',
-              'Shop Interior Design In Mumbai',
-              'Office Interior Design In Mumbai',
-              'Furniture Designers In Mumbai',
-              'Home Interior Designer In Mumbai',
-              'Best Interior Designers In Mumbai',
-              'Interior Designers In Mumbai',
-              'Interior Designer In Vile Parle Mumbai',
-            ].map((term) => (
-              <Link key={term} href="/services" className="top-search-tag" onClick={handleNavClick}>
-                {term}
+              { label: 'Interior Decorators In Mumbai', slug: 'interior-decorators-mumbai' },
+              { label: 'Commercial Interior Design In Mumbai', slug: 'commercial-interior-design-mumbai' },
+              { label: 'Residential Interior Designers In Mumbai', slug: 'residential-interior-designers-mumbai' },
+              { label: 'Living Room Interior Design In Mumbai', slug: 'living-room-interior-design-mumbai' },
+              { label: 'Kitchen Interior Design In Mumbai', slug: 'kitchen-interior-design-mumbai' },
+              { label: 'Bedroom Interior Design In Mumbai', slug: 'bedroom-interior-design-mumbai' },
+              { label: 'Shop Interior Design In Mumbai', slug: 'shop-interior-design-mumbai' },
+              { label: 'Office Interior Design In Mumbai', slug: 'office-interior-design-mumbai' },
+              { label: 'Furniture Designers In Mumbai', slug: 'furniture-designers-mumbai' },
+              { label: 'Home Interior Designer In Mumbai', slug: 'home-interior-designer-mumbai' },
+              { label: 'Best Interior Designers In Mumbai', slug: 'best-interior-designers-mumbai' },
+              { label: 'Interior Designers In Mumbai', slug: 'interior-designers-mumbai' },
+              { label: 'Interior Designer In Vile Parle Mumbai', slug: 'interior-designer-vileparle-mumbai' },
+              { label: 'Interior Designer In Andheri', slug: 'interior-designer-andheri' },
+              { label: 'Interior Designer In Thane', slug: 'interior-designer-thane' },
+              { label: 'Interior Designer In Navi Mumbai', slug: 'interior-designer-navi-mumbai' },
+              { label: 'Interior Designer In Borivali', slug: 'interior-designer-borivali' },
+              { label: 'Interior Designer Near Bandra', slug: 'interior-designer-bandra' },
+              { label: 'Luxury Interior Designers Mumbai', slug: 'luxury-interior-designers-mumbai' },
+              { label: 'Affordable Interior Designers Mumbai', slug: 'affordable-interior-designers-mumbai' },
+              { label: 'Modular Kitchen Design Mumbai', slug: 'modular-kitchen-design-mumbai' },
+              { label: 'False Ceiling Design Mumbai', slug: 'false-ceiling-design-mumbai' },
+              { label: 'Home Renovation Mumbai', slug: 'home-renovation-mumbai' },
+              { label: 'Turnkey Interior Solutions Mumbai', slug: 'turnkey-interior-solutions-mumbai' },
+              { label: '2BHK Interior Design Mumbai', slug: '2bhk-interior-design-mumbai' },
+            ].map(({ label, slug }) => (
+              <Link key={slug} href={`/${slug}`} className="top-search-tag" onClick={handleNavClick}>
+                {label}
               </Link>
             ))}
           </div>
