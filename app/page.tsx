@@ -9,7 +9,7 @@ import QuoteModal from '@/app/components/QuoteModal'
 
 export default function Home() {
   const [showQuoteModal, setShowQuoteModal] = useState(false)
-  const [dreamFormData, setDreamFormData] = useState({ name: '', phone: '', floorPlan: '', budget: '' })
+  const [dreamFormData, setDreamFormData] = useState({ name: '', email: '', phone: '', floorPlan: '', budget: '' })
   const [isLoading, setIsLoading] = useState(false)
   const [statusModal, setStatusModal] = useState({ show: false, type: '', message: '' })
 
@@ -30,13 +30,13 @@ export default function Home() {
       const response = await fetch('/api/send-callback', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, phone, floorPlan, budget })
+        body: JSON.stringify({ name, email: dreamFormData.email, phone, floorPlan, budget })
       })
       const data = await response.json()
       setIsLoading(false)
       if (data.success) {
         setStatusModal({ show: true, type: 'success', message: 'Callback request sent successfully!' })
-        setDreamFormData({ name: '', phone: '', floorPlan: '', budget: '' })
+        setDreamFormData({ name: '', email: '', phone: '', floorPlan: '', budget: '' })
         setTimeout(() => {
           setStatusModal({ show: false, type: '', message: '' })
         }, 3000)
@@ -50,7 +50,7 @@ export default function Home() {
       const text = `Hi, I want to book a callback.%0AName: ${name}%0APhone: ${phone}%0AFloor Plan: ${floorPlan}%0ABudget: ${budget}`
       window.open(`https://wa.me/${whatsappNumber}?text=${text}`, '_blank')
       setStatusModal({ show: true, type: 'success', message: 'Opening WhatsApp...' })
-      setDreamFormData({ name: '', phone: '', floorPlan: '', budget: '' })
+      setDreamFormData({ name: '', email: '', phone: '', floorPlan: '', budget: '' })
       setTimeout(() => {
         setStatusModal({ show: false, type: '', message: '' })
       }, 2000)
@@ -322,6 +322,9 @@ export default function Home() {
                     <input type="text" name="name" className="form-control design-input" placeholder="Full Name" value={dreamFormData.name} onChange={handleDreamFormChange} required />
                   </div>
                   <div className="mb-3">
+                    <input type="email" name="email" className="form-control design-input" placeholder="Email Address" value={dreamFormData.email} onChange={handleDreamFormChange} required />
+                  </div>
+                  <div className="mb-3">
                     <input type="tel" name="phone" className="form-control design-input" placeholder="Phone No." maxLength={10} minLength={10} value={dreamFormData.phone} onChange={handleDreamFormChange} required />
                   </div>
                   <div className="mb-3">
@@ -355,7 +358,7 @@ export default function Home() {
                     </select>
                   </div>
                   <button type="submit" disabled={isLoading} className="btn btn-primary w-100 design-btn mb-3">
-                    {isLoading ? 'Sending...' : 'BOOK CALL BACK'}
+                    {isLoading ? 'Sending...' : 'BOOK NOW'}
                   </button>
                   <p className="design-privacy-text text-center">✅ We respect your privacy. No spam ever.</p>
                 </form>
