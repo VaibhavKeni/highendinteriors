@@ -1,1 +1,47 @@
-
+{
+  "rating": 5,
+  "total": 20,
+  "reviews": [
+    {
+      "name": "Anuradha Vernekar",
+      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjVj87KZjJ8AB3g2ICVzbSIy3OH_JGuk-RbgLEYTDVEY7TCsyVlD=s128-c0x00000000-cc-rp-mo",
+      "rating": 5,
+      "text": "Great experience working with HIGHEND  interiors, great team members....quality work, genuine materials used for my home interior by them, great designs concepts, on-time delivery of projects...affordable quote...I highly recommend HIGHEND interiors for interior projects 👍👍👍",
+      "date": "March 2026",
+      "url": "https://www.google.com/maps/contrib/107370918341116977448/reviews"
+    },
+    {
+      "name": "Vaibhav Pavaskar",
+      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjW-BcNhi9XgrnxHeC6EKD6OG9BrTI8_AnoOq-SndWBsuq8yGM0=s128-c0x00000000-cc-rp-mo",
+      "rating": 5,
+      "text": "Working with Highend Interiors was a very great experience. 👍🏻",
+      "date": "March 2026",
+      "url": "https://www.google.com/maps/contrib/117649111161111617792/reviews"
+    },
+    {
+      "name": "aaKaSh",
+      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjVD3II2W1ZxPDg6N2J0tNiAsaCnNPOCTeAVe85x6LHlkmCF2l8=s128-c0x00000000-cc-rp-mo",
+      "rating": 5,
+      "text": "\"Excellent work by Gautam Vernekar and the Highend Interiors team. Clean design, premium finish, and great attention to detail!\"",
+      "date": "March 2026",
+      "url": "https://www.google.com/maps/contrib/106112128508171985495/reviews"
+    },
+    {
+      "name": "sandeep mandhare",
+      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJuJAroUKknv_8lzJvUoaPjwISCnzh_KaiAC-8jQ2c3IbzDjQ=s128-c0x00000000-cc-rp-mo",
+      "rating": 5,
+      "text": "",
+      "date": "March 2026",
+      "url": "https://www.google.com/maps/contrib/110526207255656464034/reviews"
+    },
+    {
+      "name": "Milind Damle",
+      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocI5lPrfYjd0KnVmiU0NRnYnDg5d-pE3czo95yEd2L-WCWWrDA=s128-c0x00000000-cc-rp-mo",
+      "rating": 5,
+      "text": "The work done by highend was with in a time given by them with perfectionand  no flows. After a year of work they came for the small work also this was never expected  because others don't.I  am very satisfied with their work n will suggest to give a chance to them .They are reasonable compared to others in the market with same quality of work",
+      "date": "March 2026",
+      "url": "https://www.google.com/maps/contrib/113288793831454816138/reviews"
+    }
+  ],
+  "fetchedAt": "2026-04-16T11:29:15.242Z"
+}
