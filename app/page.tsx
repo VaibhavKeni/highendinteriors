@@ -108,7 +108,7 @@ export default function Home() {
             </div>
             <div className="col-lg-6" data-animation="animate__fadeInRight">
               <h2 className="section-title mb-3 mb-md-4">About HIGH END Interiors</h2>
-              <p className="section-text mb-2 mb-md-3">We are a leading interior design firm specializing in residential and commercial spaces. With over 15 years of experience, we transform ordinary spaces into extraordinary living experiences.</p>
+              <p className="section-text mb-2 mb-md-3" style={{marginTop: 'inherit'}}>We are a leading interior design firm specializing in residential and commercial spaces. With over 15 years of experience, we transform ordinary spaces into extraordinary living experiences.</p>
               <p className="section-text mb-3 mb-md-4">Our team of expert designers and craftsmen work closely with clients to understand their vision and bring it to life with precision and creativity.</p>
               <ul className="section-list list-unstyled">
                 <li className="section-list-item mb-2"><i className="fas fa-check text-primary me-2"></i>Customized Design Solutions</li>
