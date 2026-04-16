@@ -109,9 +109,6 @@ export default function SEOLandingPage({ keyword, heading, subheading, descripti
             <button className="btn btn-primary btn-lg" onClick={() => setShowQuoteModal(true)}>
               <i className="fas fa-calendar-check me-2"></i>Book Consultation
             </button>
-            <a href="tel:+918355888976" className="btn btn-outline-light btn-lg">
-              <i className="fas fa-phone me-2"></i>+91 83558 88976
-            </a>
           </div>
         </div>
       </section>
