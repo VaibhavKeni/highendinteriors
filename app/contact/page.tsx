@@ -270,10 +270,10 @@ export default function Contact() {
             <a href="https://www.facebook.com/profile.php?id=100063596333131" target="_blank" rel="noopener noreferrer" className="social-btn facebook">
               <i className="fab fa-facebook"></i>
             </a>
-            <a href="https://wa.me/918355888976" target="_blank" rel="noopener noreferrer" className="social-btn whatsapp">
+            <a href="https://wa.me/919867818123" target="_blank" rel="noopener noreferrer" className="social-btn whatsapp">
               <i className="fab fa-whatsapp"></i>
             </a>
-            <a href="tel:+918355888976" className="social-btn phone">
+            <a href="tel:+919867818123" className="social-btn phone">
               <i className="fas fa-phone"></i>
             </a>
           </div>

@@ -212,11 +212,11 @@ export default function FAQ() {
             <h2>Still Have Questions?</h2>
             <p>Can't find the answer you're looking for? Our team is here to help.</p>
             <div className="contact-options">
-              <a href="tel:+918355888976" className="contact-btn phone">
+              <a href="tel:+919867818123" className="contact-btn phone">
                 <i className="fas fa-phone"></i>
                 <span>Call Us</span>
               </a>
-              <a href="https://wa.me/918355888976" target="_blank" rel="noopener noreferrer" className="contact-btn whatsapp">
+              <a href="https://wa.me/919867818123" target="_blank" rel="noopener noreferrer" className="contact-btn whatsapp">
                 <i className="fab fa-whatsapp"></i>
                 <span>WhatsApp</span>
               </a>

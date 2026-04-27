@@ -64,7 +64,7 @@ export default function QuoteModal({ show, onClose }: QuoteModalProps) {
       alert('Please fill all fields')
       return
     }
-    const whatsappNumber = '918355888976'
+    const whatsappNumber = '919867818123'
     const text = `Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`
     window.open(`https://wa.me/${whatsappNumber}?text=${text}`, '_blank')
     setFormData({ name: '', email: '', phone: '', message: '' })
