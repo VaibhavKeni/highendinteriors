@@ -1,4 +1,25 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /.next/
+Disallow: /private/
 
 Sitemap: https://highendinteriors.co.in/sitemap.xml
+
+# Google specific
+User-agent: Googlebot
+Allow: /
+
+# Bing specific
+User-agent: Bingbot
+Allow: /
+
+# Block bad bots
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
