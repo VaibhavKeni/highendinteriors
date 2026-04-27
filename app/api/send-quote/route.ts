@@ -64,10 +64,12 @@ export async function POST(request: NextRequest) {
       `,
     })
 
-    return NextResponse.json(
+    const response = NextResponse.json(
       { success: true, message: 'Quote request sent successfully!' },
       { status: 200 }
     )
+    response.headers.set('Content-Type', 'application/json')
+    return response
   } catch (error) {
     console.error('Error sending email:', error)
     return NextResponse.json(

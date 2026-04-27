@@ -24,12 +24,17 @@ export default function QuoteModal({ show, onClose }: QuoteModalProps) {
       setStatusModal({ show: true, type: 'error', message: 'Please fill all fields' })
       return
     }
+    const controller = new AbortController()
+    const timeoutId = setTimeout(() => controller.abort(), 30000)
+    
     fetch('/api/send-quote', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, email, phone, message })
+      body: JSON.stringify({ name, email, phone, message }),
+      signal: controller.signal
     })
     .then(res => {
+      clearTimeout(timeoutId)
       if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`)
       return res.json()
     })
@@ -46,8 +51,13 @@ export default function QuoteModal({ show, onClose }: QuoteModalProps) {
       }
     })
     .catch(err => {
+      clearTimeout(timeoutId)
       console.error('Error:', err)
-      setStatusModal({ show: true, type: 'error', message: `Error: ${err.message}` })
+      if (err.name === 'AbortError') {
+        setStatusModal({ show: true, type: 'error', message: 'Request timeout. Please try again.' })
+      } else {
+        setStatusModal({ show: true, type: 'error', message: `Error: ${err.message}` })
+      }
     })
   }
 
