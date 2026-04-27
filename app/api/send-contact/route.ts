@@ -12,6 +12,15 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    // Check if credentials exist
+    if (!process.env.GMAIL_USER || !process.env.GMAIL_PASSWORD) {
+      console.error('Missing Gmail credentials')
+      return NextResponse.json(
+        { success: false, message: 'Server configuration error' },
+        { status: 500 }
+      )
+    }
+
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
@@ -63,8 +72,12 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error('Error sending email:', error)
     return NextResponse.json(
-      { success: false, message: 'Failed to send message' },
+      { success: false, message: `Failed to send message: ${error instanceof Error ? error.message : 'Unknown error'}` },
       { status: 500 }
     )
   }
+}
+
+export async function OPTIONS() {
+  return NextResponse.json({}, { status: 200 })
 }
