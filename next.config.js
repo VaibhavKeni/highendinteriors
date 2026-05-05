@@ -3,14 +3,13 @@ const nextConfig = {
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,
-  generateEtags: true,
+  generateEtags: false,
   devIndicators: {
     buildActivity: false,
     buildActivityPosition: 'bottom-right',
   },
-  turbopack: {
-    root: __dirname,
-  },
+  swcMinify: true,
+  productionBrowserSourceMaps: false,
   headers: async () => {
     return [
       {
@@ -47,7 +46,7 @@ const nextConfig = {
         headers: [
           {
             key: 'Cache-Control',
-            value: 'no-cache, no-store, must-revalidate'
+            value: 'public, max-age=60'
           }
         ],
       },
@@ -65,7 +64,17 @@ const nextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'lh3.googleusercontent.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
+  },
+  onDemandEntries: {
+    maxInactiveAge: 60 * 1000,
+    pagesBufferLength: 5,
   },
 }
 

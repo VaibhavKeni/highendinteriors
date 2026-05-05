@@ -100,7 +100,9 @@ export default function Home() {
         <div className="container">
           <div className="row g-4 g-md-5 align-items-center">
             <div className="col-lg-6" data-animation="animate__fadeInLeft">
-              <img src="/assets/images/about-hero.jpg" className="img-fluid rounded" alt="About HIGHEND Interiors" loading="lazy" />
+              <div style={{width: '100%', height: '400px', background: 'linear-gradient(135deg, #d4af37 0%, #b8941f 100%)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                <span style={{color: 'white', fontSize: '18px', fontWeight: 'bold'}}>About HIGHEND Interiors</span>
+              </div>
             </div>
             <div className="col-lg-6" data-animation="animate__fadeInRight">
               <h2 className="section-title mb-3 mb-md-4">About HIGH END Interiors</h2>
@@ -308,8 +310,7 @@ export default function Home() {
       
 
       <section className="design-dream-section py-4 py-md-5" id="design-dream">
-        <div className="design-dream-bg">
-          <img src="/assets/images/design-dream-bg.jpg" alt="Luxury Living Room" className="design-dream-img" loading="lazy" />
+        <div className="design-dream-bg" style={{background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(184, 148, 31, 0.1) 100%)'}}>
         </div>
         <div className="container position-relative" style={{zIndex: 2}}>
           <div className="row g-4 g-md-5">
