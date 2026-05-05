@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
+import dynamic from 'next/dynamic'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'animate.css'
 import './styles/globals.css'
-import BackToTop from './components/BackToTop'
+
+const BackToTop = dynamic(() => import('./components/BackToTop'), { ssr: false })
 
 export const metadata: Metadata = {
   title: 'Best Interior Designer in Mumbai | HIGHEND Interiors',

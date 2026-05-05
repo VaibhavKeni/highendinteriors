@@ -10,6 +10,23 @@ const nextConfig = {
   },
   swcMinify: true,
   productionBrowserSourceMaps: false,
+  experimental: {
+    optimizePackageImports: ['bootstrap'],
+  },
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.optimization.splitChunks.cacheGroups = {
+        ...config.optimization.splitChunks.cacheGroups,
+        bootstrap: {
+          test: /[\\/]node_modules[\\/]bootstrap[\\/]/,
+          name: 'bootstrap',
+          priority: 10,
+          reuseExistingChunk: true,
+        },
+      }
+    }
+    return config
+  },
   headers: async () => {
     return [
       {
@@ -76,6 +93,7 @@ const nextConfig = {
     maxInactiveAge: 60 * 1000,
     pagesBufferLength: 5,
   },
+  staticPageGenerationTimeout: 120,
 }
 
 module.exports = nextConfig

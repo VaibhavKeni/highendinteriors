@@ -1,12 +1,15 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import dynamic from 'next/dynamic'
 import Navbar from '@/app/components/Navbar'
 import Footer from '@/app/components/Footer'
 import CitiesSlider from '@/app/components/Slider'
 import MobileBottomNav from '@/app/components/MobileBottomNav'
 import QuoteModal from '@/app/components/QuoteModal'
 import ReviewRequest from '@/app/components/ReviewRequest'
+
+const ReviewSection = dynamic(() => import('@/app/components/ReviewSection'), { ssr: true })
 
 export default function Home() {
   const [showQuoteModal, setShowQuoteModal] = useState(false)
