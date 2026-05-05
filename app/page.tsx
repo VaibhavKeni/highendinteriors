@@ -97,7 +97,7 @@ export default function Home() {
       <Navbar onQuoteClick={() => setShowQuoteModal(true)} />
       <CitiesSlider />
 
-      <h1 className="visually-hidden">Best Interior Designer in Mumbai | HIGHEND Interiors</h1>
+      <h1 className="visually-hidden">Transform Your Space with Expert Interior Design Services in Mumbai</h1>
 
       <section className="about-section py-4 py-md-5" id="about">
         <div className="container">
@@ -108,7 +108,7 @@ export default function Home() {
               </div>
             </div>
             <div className="col-lg-6" data-animation="animate__fadeInRight">
-              <h2 className="section-title mb-3 mb-md-4">About HIGH END Interiors</h2>
+              <h2 className="section-title mb-3 mb-md-4">Premium Interior Design Solutions</h2>
               <p className="section-text mb-2 mb-md-3">We are a leading interior design firm specializing in residential and commercial spaces. With over 15 years of experience, we transform ordinary spaces into extraordinary living experiences.</p>
               <p className="section-text mb-3 mb-md-4">Our team of expert designers and craftsmen work closely with clients to understand their vision and bring it to life with precision and creativity.</p>
               <ul className="section-list list-unstyled">
@@ -126,8 +126,8 @@ export default function Home() {
       <section className="why-choose-section py-4 py-md-5 bg-light" id="why-choose">
         <div className="container">
           <div className="text-center mb-4 mb-md-5" data-animation="animate__fadeInUp">
-            <h2 className="section-title">Why Choose HIGH END Interiors</h2>
-            <p className="section-subtitle">What Sets Us Apart</p>
+            <h2 className="section-title">Why Choose Our Interior Design Services</h2>
+            <p className="section-subtitle">Expert Team, Quality Materials, On-Time Delivery</p>
           </div>
           <div className="row g-3 g-md-4">
             {[
@@ -304,7 +304,7 @@ export default function Home() {
               View All Testimonials
             </a>
             <a href="https://maps.app.goo.gl/YraiHXFWgaJHuPpS6" target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary">
-              View All Google Reviews for HIGH END Interiors
+              View All Google Reviews
             </a>
           </div>
         </div>
