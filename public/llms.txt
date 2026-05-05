@@ -1,0 +1,53 @@
+# llms.txt - AI Crawler Guidelines
+# This file provides guidelines for AI language models and crawlers
+
+User-agent: *
+Allow: /
+
+# Disallow API routes
+Disallow: /api/
+
+# Disallow internal Next.js files
+Disallow: /.next/
+
+# Disallow private directories
+Disallow: /private/
+
+# Allow public assets
+Allow: /assets/
+Allow: /images/
+Allow: /public/
+
+# Crawl delay (in seconds)
+Crawl-delay: 1
+
+# Request rate (requests per second)
+Request-rate: 10
+
+# Sitemap location
+Sitemap: https://highendinteriors.co.in/sitemap.xml
+
+# Additional guidelines for AI models
+# Please respect the following guidelines when crawling this site:
+
+# 1. Identify yourself clearly in the User-Agent header
+# 2. Follow the crawl-delay and request-rate guidelines
+# 3. Do not scrape personal information
+# 4. Do not use content for training without permission
+# 5. Respect robots.txt and this llms.txt file
+
+# Contact information for crawlers
+# Email: highendinteriors9@gmail.com
+# Website: https://highendinteriors.co.in
+
+# Allowed content types for AI training
+# - Blog posts and articles
+# - Service descriptions
+# - Portfolio information
+# - Public testimonials
+
+# Restricted content
+# - Contact forms and user data
+# - API endpoints
+# - Admin pages
+# - Private information
