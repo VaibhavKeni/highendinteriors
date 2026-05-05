@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://highendinteriors.co.in/',
   },
+  metadataBase: new URL('https://highendinteriors.co.in'),
   openGraph: {
     title: 'Best Interior Designer in Mumbai | HIGHEND Interiors',
     description: 'HIGHEND Interiors — Best interior designer in Mumbai. Affordable & luxury home interiors, modular kitchens, office design. 15+ years | 500+ projects | 5★ Google rating.',
@@ -51,7 +52,6 @@ export default function RootLayout({
       <head>
         <link rel="icon" type="image/icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-        <link rel="canonical" href="https://highendinteriors.co.in/" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

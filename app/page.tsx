@@ -211,7 +211,7 @@ export default function Home() {
           <div className="row g-4 g-md-5 align-items-center">
             <div className="col-lg-6 order-2 order-lg-1" data-animation="animate__fadeInLeft">
               <div className="partners-img-wrapper">
-                <img src="/assets/images/Trusted_Partners/Trusted%20Partners.png" alt="Trusted Partners" className="partners-img w-100" />
+                <img src="/assets/images/Trusted_Partners/Trusted%20Partners.png" alt="Trusted Partners" className="partners-img w-100" loading="lazy" />
               </div>
             </div>
             <div className="col-lg-6 order-1 order-lg-2" data-animation="animate__fadeInRight">
