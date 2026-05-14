@@ -11,11 +11,12 @@ interface SiteProject {
   name: string
   category: string
   images: string[]
+  videos?: string[]
 }
 
 export default function Gallery() {
   const [selectedSite, setSelectedSite] = useState<SiteProject | null>(null)
-  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [currentMediaIndex, setCurrentMediaIndex] = useState(0)
   const [showModal, setShowModal] = useState(false)
   const [showQuoteModal, setShowQuoteModal] = useState(false)
 
@@ -313,24 +314,58 @@ export default function Gallery() {
         '/assets/images/Highend Interiors/Residential-14/IMG-20260502-WA0017.jpg',
         '/assets/images/Highend Interiors/Residential-14/IMG-20260502-WA0018.jpg'
       ]
+    },
+    'Residential-15': {
+      name: 'Residential-15',
+      category: 'residential',
+      images: [
+        '/assets/images/Highend Interiors/Residential-15/IMG-20260513-WA0004.jpg',
+        '/assets/images/Highend Interiors/Residential-15/IMG-20260513-WA0005.jpg',
+        '/assets/images/Highend Interiors/Residential-15/IMG-20260513-WA0006.jpg',
+        '/assets/images/Highend Interiors/Residential-15/IMG-20260513-WA0007.jpg',
+        '/assets/images/Highend Interiors/Residential-15/IMG-20260513-WA0008.jpg',
+        '/assets/images/Highend Interiors/Residential-15/IMG-20260513-WA0009.jpg',
+        '/assets/images/Highend Interiors/Residential-15/IMG-20260513-WA0010.jpg',
+        '/assets/images/Highend Interiors/Residential-15/IMG-20260513-WA0011.jpg',
+        '/assets/images/Highend Interiors/Residential-15/IMG-20260513-WA0012.jpg'
+      ],
+      videos: [
+        '/assets/images/Highend Interiors/Residential-15/VID-20260510-WA0004.mp4',
+        '/assets/images/Highend Interiors/Residential-15/VID-20260510-WA0005.mp4',
+        '/assets/images/Highend Interiors/Residential-15/VID-20260513-WA0013.mp4',
+        '/assets/images/Highend Interiors/Residential-15/VID-20260513-WA0014.mp4',
+        '/assets/images/Highend Interiors/Residential-15/VID-20260513-WA0015.mp4',
+        '/assets/images/Highend Interiors/Residential-15/VID-20260513-WA0016.mp4',
+        '/assets/images/Highend Interiors/Residential-15/VID-20260513-WA0017.mp4'
+      ]
     }
   }
 
+  const getAllMedia = (site: SiteProject) => {
+    const allMedia = [...site.images]
+    if (site.videos) allMedia.push(...site.videos)
+    return allMedia
+  }
+
+  const isVideo = (url: string) => url.endsWith('.mp4')
+
   const handleSiteClick = (siteName: string) => {
     setSelectedSite(siteProjects[siteName])
-    setCurrentImageIndex(0)
+    setCurrentMediaIndex(0)
     setShowModal(true)
   }
 
   const handleNextImage = () => {
     if (selectedSite) {
-      setCurrentImageIndex((prev) => (prev + 1) % selectedSite.images.length)
+      const allMedia = getAllMedia(selectedSite)
+      setCurrentMediaIndex((prev) => (prev + 1) % allMedia.length)
     }
   }
 
   const handlePrevImage = () => {
     if (selectedSite) {
-      setCurrentImageIndex((prev) => (prev - 1 + selectedSite.images.length) % selectedSite.images.length)
+      const allMedia = getAllMedia(selectedSite)
+      setCurrentMediaIndex((prev) => (prev - 1 + allMedia.length) % allMedia.length)
     }
   }
 
@@ -348,7 +383,7 @@ export default function Gallery() {
     }
     window.addEventListener('keydown', handleKey)
     return () => window.removeEventListener('keydown', handleKey)
-  }, [showModal, closeModal, selectedSite])
+  }, [showModal, closeModal, selectedSite, currentMediaIndex])
 
   const sites = Object.keys(siteProjects)
 
@@ -386,7 +421,7 @@ export default function Gallery() {
                       <div className="overlay-content">
                         <h3>{siteName}</h3>
                         <p>{site.category.charAt(0).toUpperCase() + site.category.slice(1)}</p>
-                        <p className="image-count">{site.images.length} Photos</p>
+                        <p className="image-count">{getAllMedia(site).length} Media</p>
                         <button className="view-btn">View All</button>
                       </div>
                     </div>
@@ -410,18 +445,28 @@ export default function Gallery() {
             {/* Header */}
             <div className="modal-header">
               <h2>{selectedSite.name}</h2>
-              <span className="image-counter">{currentImageIndex + 1} / {selectedSite.images.length}</span>
+              <span className="image-counter">{currentMediaIndex + 1} / {getAllMedia(selectedSite).length}</span>
             </div>
 
-            {/* Main image with nav */}
+            {/* Main image/video with nav */}
             <div className="modal-body">
               <div className="main-image-container">
-                <img
-                  key={currentImageIndex}
-                  src={selectedSite.images[currentImageIndex]}
-                  alt={`${selectedSite.name} - ${currentImageIndex + 1}`}
-                  className="main-image"
-                />
+                {isVideo(getAllMedia(selectedSite)[currentMediaIndex]) ? (
+                  <video
+                    key={currentMediaIndex}
+                    src={getAllMedia(selectedSite)[currentMediaIndex]}
+                    className="main-image"
+                    autoPlay
+                    muted
+                  />
+                ) : (
+                  <img
+                    key={currentMediaIndex}
+                    src={getAllMedia(selectedSite)[currentMediaIndex]}
+                    alt={`${selectedSite.name} - ${currentMediaIndex + 1}`}
+                    className="main-image"
+                  />
+                )}
                 <button className="nav-btn prev-btn" onClick={handlePrevImage} aria-label="Previous">
                   <i className="fas fa-chevron-left"></i>
                 </button>
@@ -432,15 +477,27 @@ export default function Gallery() {
 
               {/* Thumbnails */}
               <div className="thumbnail-gallery">
-                {selectedSite.images.map((img, index) => (
-                  <div
-                    key={index}
-                    className={`thumbnail ${index === currentImageIndex ? 'active' : ''}`}
-                    onClick={() => setCurrentImageIndex(index)}
-                  >
-                    <img src={img} alt={`Thumbnail ${index + 1}`} />
-                  </div>
-                ))}
+                {getAllMedia(selectedSite).map((media, index) => {
+                  const isVid = isVideo(media)
+                  return (
+                    <div
+                      key={index}
+                      className={`thumbnail ${index === currentMediaIndex ? 'active' : ''}`}
+                      onClick={() => setCurrentMediaIndex(index)}
+                    >
+                      {isVid ? (
+                        <>
+                          <div className="video-thumbnail-placeholder">
+                            <video src={media} preload="metadata" muted style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+                          </div>
+                          <div className="video-badge"><i className="fas fa-play"></i></div>
+                        </>
+                      ) : (
+                        <img src={media} alt={`Thumbnail ${index + 1}`} />
+                      )}
+                    </div>
+                  )
+                })}
               </div>
             </div>
 

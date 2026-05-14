@@ -100,9 +100,7 @@ export default function Home() {
         <div className="container">
           <div className="row g-4 g-md-5 align-items-center">
             <div className="col-lg-6" data-animation="animate__fadeInLeft">
-              <div style={{width: '100%', height: '400px', background: 'linear-gradient(135deg, #d4af37 0%, #b8941f 100%)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                <span style={{color: 'white', fontSize: '18px', fontWeight: 'bold'}}>About HIGHEND Interiors</span>
-              </div>
+              <img src="/assets/images/Highend%20Interiors/Drawings%201/IMG-20260312-WA0009.jpg" alt="About HIGHEND Interiors - Interior Design" className="w-100 rounded" style={{objectFit: 'cover', height: '400px'}} />
             </div>
             <div className="col-lg-6" data-animation="animate__fadeInRight">
               <h2 className="section-title mb-3 mb-md-4">Premium Interior Design Solutions</h2>
