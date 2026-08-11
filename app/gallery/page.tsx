@@ -338,6 +338,45 @@ export default function Gallery() {
         '/assets/images/Highend Interiors/Residential-15/VID-20260513-WA0016.mp4',
         '/assets/images/Highend Interiors/Residential-15/VID-20260513-WA0017.mp4'
       ]
+    },
+    'Residential-16': {
+      name: 'Residential-16',
+      category: 'residential',
+      images: [
+        '/assets/images/Highend Interiors/Residential-16/WhatsApp Image 2026-08-08 at 8.18.12 PM (1).jpeg',
+        '/assets/images/Highend Interiors/Residential-16/WhatsApp Image 2026-08-08 at 8.18.12 PM (2).jpeg',
+        '/assets/images/Highend Interiors/Residential-16/WhatsApp Image 2026-08-08 at 8.18.12 PM (3).jpeg',
+        '/assets/images/Highend Interiors/Residential-16/WhatsApp Image 2026-08-08 at 8.18.13 PM (2).jpeg',
+        '/assets/images/Highend Interiors/Residential-16/WhatsApp Image 2026-08-08 at 8.18.13 PM (3).jpeg',
+        '/assets/images/Highend Interiors/Residential-16/WhatsApp Image 2026-08-08 at 8.18.13 PM.jpeg',
+        '/assets/images/Highend Interiors/Residential-16/WhatsApp Image 2026-08-08 at 8.18.14 PM (1).jpeg',
+        '/assets/images/Highend Interiors/Residential-16/WhatsApp Image 2026-08-08 at 8.18.14 PM (2).jpeg',
+        '/assets/images/Highend Interiors/Residential-16/WhatsApp Image 2026-08-08 at 8.18.14 PM (3).jpeg',
+        '/assets/images/Highend Interiors/Residential-16/WhatsApp Image 2026-08-08 at 8.18.15 PM (1).jpeg',
+        '/assets/images/Highend Interiors/Residential-16/WhatsApp Image 2026-08-08 at 8.18.15 PM (2).jpeg',
+        '/assets/images/Highend Interiors/Residential-16/WhatsApp Image 2026-08-08 at 8.18.16 PM (2).jpeg',
+        '/assets/images/Highend Interiors/Residential-16/WhatsApp Image 2026-08-08 at 8.18.17 PM (1).jpeg',
+        '/assets/images/Highend Interiors/Residential-16/WhatsApp Image 2026-08-08 at 8.18.18 PM (1).jpeg',
+        '/assets/images/Highend Interiors/Residential-16/WhatsApp Image 2026-08-08 at 8.18.18 PM (2).jpeg',
+        '/assets/images/Highend Interiors/Residential-16/WhatsApp Image 2026-08-08 at 8.18.18 PM (3).jpeg',
+        '/assets/images/Highend Interiors/Residential-16/WhatsApp Image 2026-08-08 at 8.18.19 PM (2).jpeg',
+        '/assets/images/Highend Interiors/Residential-16/WhatsApp Image 2026-08-08 at 8.18.19 PM (3).jpeg',
+        '/assets/images/Highend Interiors/Residential-16/WhatsApp Image 2026-08-08 at 8.18.19 PM.jpeg',
+        '/assets/images/Highend Interiors/Residential-16/WhatsApp Image 2026-08-08 at 8.18.20 PM (1).jpeg',
+        '/assets/images/Highend Interiors/Residential-16/WhatsApp Image 2026-08-08 at 8.18.20 PM (3).jpeg',
+        '/assets/images/Highend Interiors/Residential-16/WhatsApp Image 2026-08-08 at 8.18.21 PM (2).jpeg',
+        '/assets/images/Highend Interiors/Residential-16/WhatsApp Image 2026-08-08 at 8.18.21 PM.jpeg',
+        '/assets/images/Highend Interiors/Residential-16/WhatsApp Image 2026-08-08 at 8.18.22 PM.jpeg',
+        '/assets/images/Highend Interiors/Residential-16/WhatsApp Image 2026-08-09 at 10.25.26 AM (1).jpeg',
+        '/assets/images/Highend Interiors/Residential-16/WhatsApp Image 2026-08-09 at 10.25.26 AM.jpeg',
+        '/assets/images/Highend Interiors/Residential-16/WhatsApp Image 2026-08-09 at 10.25.27 AM (1).jpeg',
+        '/assets/images/Highend Interiors/Residential-16/WhatsApp Image 2026-08-09 at 10.25.27 AM (2).jpeg',
+        '/assets/images/Highend Interiors/Residential-16/WhatsApp Image 2026-08-09 at 10.25.27 AM (3).jpeg',
+        '/assets/images/Highend Interiors/Residential-16/WhatsApp Image 2026-08-09 at 10.25.27 AM (4).jpeg',
+        '/assets/images/Highend Interiors/Residential-16/WhatsApp Image 2026-08-09 at 10.25.27 AM (6).jpeg',
+        '/assets/images/Highend Interiors/Residential-16/WhatsApp Image 2026-08-09 at 10.25.27 AM (7).jpeg',
+        '/assets/images/Highend Interiors/Residential-16/WhatsApp Image 2026-08-09 at 10.25.27 AM (8).jpeg'
+      ]
     }
   }
 

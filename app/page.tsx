@@ -368,6 +368,48 @@ export default function Home() {
               <div className="design-content">
                 <p className="design-tagline">Design, execution, and delivery — all handled seamlessly by experts.</p>
                 <h2 className="design-heading">Hassle free Interiors from start to finish</h2>
+                
+                <div className="design-benefits mt-4">
+                  <div className="benefit-item mb-3">
+                    <div className="benefit-icon">
+                      <i className="fas fa-check-circle"></i>
+                    </div>
+                    <div className="benefit-text">
+                      <h5>Expert Consultation</h5>
+                      <p>Personalized design solutions tailored to your style and budget</p>
+                    </div>
+                  </div>
+                  
+                  <div className="benefit-item mb-3">
+                    <div className="benefit-icon">
+                      <i className="fas fa-cube"></i>
+                    </div>
+                    <div className="benefit-text">
+                      <h5>3D Visualization</h5>
+                      <p>See your space before execution with detailed 3D renderings</p>
+                    </div>
+                  </div>
+                  
+                  <div className="benefit-item mb-3">
+                    <div className="benefit-icon">
+                      <i className="fas fa-tools"></i>
+                    </div>
+                    <div className="benefit-text">
+                      <h5>Professional Execution</h5>
+                      <p>Quality craftsmanship with premium materials and attention to detail</p>
+                    </div>
+                  </div>
+                  
+                  <div className="benefit-item">
+                    <div className="benefit-icon">
+                      <i className="fas fa-shield-alt"></i>
+                    </div>
+                    <div className="benefit-text">
+                      <h5>2-Year Warranty</h5>
+                      <p>Complete peace of mind with warranty on all workmanship</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
