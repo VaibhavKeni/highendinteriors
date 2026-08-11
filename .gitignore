@@ -1,15 +1,20 @@
 # Dependencies
-node_modules
+node_modules/
+/.pnp
+.pnp.js
 
-# Next.js
-.next/
-out/
+# Testing
+/coverage
 
-# Production build
-build/
-dist/
+# Production
+/build
+/dist
+/.next/
+/out/
 
-# Environment variables
+# Misc
+.DS_Store
+*.pem
 .env
 .env.local
 .env.development.local
@@ -17,40 +22,280 @@ dist/
 .env.production.local
 
 # Logs
-logs
-*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
 lerna-debug.log*
-
-# Runtime data
-pids
-*.pid
-*.seed
-*.pid.lock
-
-# Coverage directory used by tools like istanbul
-coverage/
-*.lcov
+.pnpm-debug.log*
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
 .idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE
+*.swp
+*.swo
+*~
+.vimrc
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+
+# OS
+Thumbs.db
+.AppleDouble
+.LSOverride
+._*
+
+# Markdown Documentation Files (Ignore all .md files except README.md)
+*.md
+!README.md
+!CHANGELOG.md
+
+# Specific markdown files to ignore
+SEO_STRATEGY_RANK_1.md
+SEO_ACTION_PLAN_RANK_1.md
+SEO_IMPLEMENTATION_CHECKLIST.md
+AUDIT_REPORT_ANALYSIS.md
+BROKEN_IMAGES_FIXED.md
+BUILD_OPTIMIZATION_GUIDE.md
+COMPLETE_SEO_FIX_SUMMARY.md
+DEPLOY_NOW.md
+DEPLOYMENT_CHECKLIST.md
+DEPLOYMENT_GUIDE_v4.md
+DEPLOYMENT_READY.md
+DEPLOYMENT_SETUP.md
+FINAL_COMPREHENSIVE_FIX_v3.md
+FINAL_FIX_v5_COMPLETE.md
+FINAL_FIX_v6_COMPLETE.md
+FINAL_FIX_v7_COMPLETE.md
+FINAL_FIXES_SUMMARY.md
+OPTIMIZED_TITLES.md
+README_SEO_DEPLOYMENT.md
+ROBOTS_TXT_GUIDE.md
+SEO_FIXES_REPORT.md
+SEO_GUIDE.md
+SEO_IMPLEMENTATION.md
+SEO_KEYWORDS_COMPLETE_LIST.md
+SEO_QUICK_REFERENCE.md
+TEXT_TO_HTML_OPTIMIZATION.md
+VERIFICATION_CHECKLIST.md
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.swp
+*.swo
+
+# Cache
+.cache/
+.eslintcache
+.stylelintcache
+
+# Build files
+dist/
+build/
+*.tsbuildinfo
+
+# Next.js
+.next/
+out/
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Output of 'npm pack'
+*.tgz
+
+# dotenv environment variables file
+.env*.local
+
+# Mac files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux files
+.directory
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Temporary files
+*.tmp
+*.temp
+.tmp/
+
+# IDE specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.swp
+*.swo
 
 # OS generated files
-Thumbs.db
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 
-# Temporary folders
-tmp/
-temp/
-SEO_IMPLEMENTATION.md
+# Node
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build output
+dist/
+build/
+.next/
+out/
+
+# Testing
+coverage/
+.nyc_output/
+
+# Misc
+*.log
+*.swp
+*.swo
+*~
+.cache/
+.vuepress/dist/
+.serverless/
+.fusebox/
+.dynamodb/
+.tern-port
+.vscode-test
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# Local Netlify folder
+.netlify
+
+# Local Vercel folder
+.vercel
+
+# Playwright
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+
+# Cypress
+cypress/screenshots/
+cypress/videos/
+cypress/downloads/
+
+# Storybook
+storybook-static/
+
+# Turbo
+.turbo/
+
+# Ignore all markdown files in root except README
+/*.md
+!README.md
+
+# Ignore documentation files
+docs/*.md
+!docs/README.md
+
+# Ignore configuration backup files
+*.config.backup.js
+*.config.old.js
+
+# Ignore lock files (optional - uncomment if needed)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Ignore IDE workspace settings
+.vscode/settings.json
+.vscode/launch.json
+.vscode/extensions.json
+
+# Ignore system files
+.env.example
+.env.sample
+
+# Ignore test coverage
+coverage/
+.coverage
+.nyc_output/
+
+# Ignore bundle analyzer
+.bundle-analyzer
+
+# Ignore performance profiling
+.profile
+
+# Ignore debug logs
+debug.log
+lerna-debug.log
+
+# Ignore temporary build files
+.tsbuildinfo
+tsconfig.tsbuildinfo
+
+# Ignore node_modules in any subdirectory
+**/node_modules/
+
+# Ignore dist in any subdirectory
+**/dist/
+
+# Ignore build in any subdirectory
+**/build/
+
+# Ignore .next in any subdirectory
+**/.next/
+
+# Ignore coverage in any subdirectory
+**/coverage/
+
+# Ignore .env files in any subdirectory
+**/.env
+**/.env.local
+**/.env.*.local
